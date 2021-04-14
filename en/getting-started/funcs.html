@@ -173,32 +173,25 @@
                         <h1 id="using-models-to-make-predictions"><a class="header" href="#using-models-to-make-predictions">Using models to make predictions</a></h1>
 <p><em>In machine learning we want to build a model (a function) to do what we want.</em></p>
 <p>You must have heard of machine learning models doing amazing things. But what exactly is a model? A model takes in some input and spit out some output. They are like functions we write in programs. You might have heard that some machine learning models know how to read a picture and translate them into words. In this case the input is the picture, and the output is the content of a picture in words we understand. Or maybe you have heard of how models can predict the stock market (while this is true, it's not that useful since the prediction may not be accurate, or else data scientists get so rich they no longer do data science), in such case the input previous days or years of share prices, the output tomorrow's share price.</p>
-<pre><code class="language-python">def finance(x: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    This is a finance bot that predicts tomorrow's share prices.
-    I mean, if you don't know how machine learning works,
+<pre><code class="language-python">    I mean, if you don't know how machine learning works,
     You cannot tell the difference between this and a real working method!
     &quot;&quot;&quot;
-    return x.sum().item()
+    return x.sum()
 </code></pre>
 <p>The possibilities of different uses of models is endless. But there are only <em>2 kinds</em> of models, <strong>classification</strong>, and <strong>regression</strong>. What are those things?</p>
 <h2 id="classification"><a class="header" href="#classification">Classification</a></h2>
 <p><em>Given some input, we want to separate those input data into different classes.</em></p>
 <p>A concrete example of the above sentence: Suppose that we have several pictures of dogs and cats, and we want to separate them into two piles. One pile for dogs, and the other for cats. In machine learning, we could simply train a <strong>classification model</strong>, and the image is transformed by the model into two categories, dogs and cats. This task is called <strong>classification</strong> by us super smart machine learning masters.</p>
-<pre><code class="language-python">def cat_or_dog(image: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    Do something smart to the image.
-    Returns a numbers to tell your confidence in the image being a cat instead of a dog.
+<pre><code class="language-python">    Returns a numbers to tell your confidence in the image being a cat instead of a dog.
     In this function how likely it is a cat is affected by the image brightness.
     Obviously not a good way.
     &quot;&quot;&quot;
     result = image.sum() / image.size
     assert 0.0 &lt;= result &lt;= 1.0
-    return result.item()
+    return result
 </code></pre>
 <p>In the above example, since there are only two categories, we can easily use a number to represent our confidence in the input being one of the classes, cats. The problem is referred to as a <strong>binary classification problem</strong>. However, what happens when there are more than two categories?</p>
-<pre><code class="language-python">def cat_dog_rabbit(image: ndarray) -&gt; ndarray:
-    &quot;&quot;&quot;
+<pre><code class="language-python">    &quot;&quot;&quot;
     There are three categories. Cats. Dogs. Rabbits.
     So normally we will output an array of length 3 showing how possible the input is of each class.
     Do note that the array sums to 1 because the sum of probablities of all possible cases is 1.
@@ -209,12 +202,9 @@
 <h2 id="regression"><a class="header" href="#regression">Regression</a></h2>
 <p><em>Given some input, we want to predict the score of the input data.</em> Usually, the score is unbounded.</p>
 <p>A concrete example of the above sentence: Suppose that we have an image of a star. We want to predict how hot is the surface (since we data scientists don't study physics and machine learning is cooler anyways), how are we going to do it?</p>
-<pre><code class="language-python">def star_temperature(image: ndarray) -&gt; float:
+<pre><code class="language-python">    since the return value does not have a range.
     &quot;&quot;&quot;
-    This function looks just like `cat_or_dog` but is actually different
-    since the return value does not have a range.
-    &quot;&quot;&quot;
-    return (10000 * image.sum() / image.size).item()
+    return 10000 * image.sum() / image.size
 </code></pre>
 <p>The output may not even be scalar. It can be an array as well! Predicting scalar is much more common though. To tell part classification from regression, just keep this in mind: <em>regression predicts value.</em></p>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>

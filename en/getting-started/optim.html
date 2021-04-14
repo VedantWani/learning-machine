@@ -182,12 +182,7 @@
 <p>Now let's generalize the idea. Imagine our function \(f\) is no longer limited to 2 inputs. Let's substitute \(f\) for a loss function \(L\) we discussed last chapter (the formal one). </p>
 <p>The input is a function \(f\) that we want to optimize (the ball that we want to roll down the hill), and a pair of inputs \((x, y)\), given that \(n \in N\), \(x, y \in R^n\)</p>
 <p>Remember that we've said over and over that the function is determined by it's parameters? To optimize a function, we optimize its parameter. In this case, <strong>the function parameters</strong> is the position of the ball, and the <strong>loss function output</strong> is the value we want to minimize.</p>
-<pre><code class="language-python">def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    loss_func calls the function for you,
-    and evaluate how far in the model's output to the correct output.
-    &quot;&quot;&quot;
-
+<pre><code class="language-python">
     pred_y = F(real_x)
     loss = distance(pred_y, real_y)
 
@@ -197,7 +192,7 @@
     return loss
 
 
-def optimize_function(F: Callable):
+def optimize_function(F):
     &quot;We are doing something to `F`'s parameter and hope that the function gets better&quot;
     F.parameter = 0
 </code></pre>
@@ -215,12 +210,7 @@ def optimize_function(F: Callable):
 <p><em>You can think of gradient as the steepest way uphill.</em> If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the <strong>loss</strong>. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this <strong>stochastic gradient descent</strong>.</p>
 <h3 id="stochastic-gradient-descent"><a class="header" href="#stochastic-gradient-descent">Stochastic gradient descent</a></h3>
 <p>Stochastic gradient descent is the most common gradient descent method, and the most basic one. It involves only 3 variables, \(x, y, lr, iter\). \(x\) is your input variable, \(y\) is your output variable, and \(lr\), learning rate, is a scalar showing how far you can move in one iteration. You repeat \(iter\) iterations. For the ultimate quality we would want \(lr\) to be as small as possible (to not jump too far because you want to follow the terrain), and as many \(iter\) as possible (to ensure that the minimum is obtained). But it's not possible to do so in practice. Selecting \(lr\) and \(iter\) has become more art than science, and is often called <strong>hyperparameter tuning</strong> (parameter is for functions).</p>
-<pre><code class="language-python">def loss_func(x: ndarray, y: ndarray) -&gt; float:
-    &quot;What does the terrain look like? It looks like a bowl, the closer to the center the lower.&quot;
-    return mse_loss.mse_loss(x, y)
-
-
-def sgd_once(x: ndarray, y: ndarray, lr: float):
+<pre><code class="language-python">def sgd_once(x, y, lr):
     &quot;&quot;&quot;
     sgd stands for stochastic gradient descent.
     It moves in the direct opposite of the gradient.
