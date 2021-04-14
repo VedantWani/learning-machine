@@ -173,12 +173,12 @@
                         <h1 id="what-is-a-better-function"><a class="header" href="#what-is-a-better-function">What is a better function?</a></h1>
 <p><em>We need a way to tell us that a function is good.</em></p>
 <p>Let's be honest, we are learning machine learning for some serious, important, big brain things. We want the model to be as good as possible at what it does. But what is good? </p>
-<pre><code class="language-python">def f(x: float) -&gt; float:
+<pre><code class="language-python">def f(x):
     &quot;The function looks good&quot;
     return 3 * x + 5
 
 
-def g(x: float) -&gt; float:
+def g(x):
     &quot;The function also looks good&quot;
     return 8 * x - 1
 </code></pre>
@@ -187,20 +187,15 @@ def g(x: float) -&gt; float:
 <p>In machine learning, there are a lot of tasks tackling real world problems. Such as understanding images. Such as predicting the next champion team of the world cup. There are too many possibilities in the real world. To deal with that problem, scientists basically give up. They stop trying to create a new prefect model. Instead, they focus on a model that solves problems good enough. They use a scalar to determine how far away the model's prediction of a known problem is different from the right answer, it's very common to call the scalar <strong>loss</strong>.</p>
 <p>The smaller the loss, the better the function is. Usually the loss is a positive number, but occasionally we see negative losses permitted in a problem. As long a smaller loss indicates a better function. To calculate loss, we define a <strong>loss function</strong>. <em>The loss function is defined to operate on the function itself (it's a function of function) and output how good the model is. Realistically though, the loss function operates on the output of the function and determines how good that output is.</em> To further clarify what I mean</p>
 <h3 id="loosely-defined-loss-function-the-one-used-in-pytorch-tensorflow-etc"><a class="header" href="#loosely-defined-loss-function-the-one-used-in-pytorch-tensorflow-etc">Loosely defined loss function (the one used in PyTorch, TensorFlow, etc):</a></h3>
-<pre><code class="language-python">def distance(x: ndarray, y: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    This function is for calculating the distance between x and y
-    In this case, it's the squared-euclidean distance
-    &quot;&quot;&quot;
-    return ((x - y) ** 2).sum().item()
-</code></pre>
-<h3 id="formally-defined-loss-function"><a class="header" href="#formally-defined-loss-function">Formally defined loss function:</a></h3>
-<pre><code class="language-python">def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -&gt; float:
+<pre><code class="language-python">    return ((x - y) ** 2).sum()
+
+
+def loss_func(F, real_x, real_y):
     &quot;&quot;&quot;
     loss_func calls the function for you,
-    and evaluate how far in the model's output to the correct output.
-    &quot;&quot;&quot;
-
+</code></pre>
+<h3 id="formally-defined-loss-function"><a class="header" href="#formally-defined-loss-function">Formally defined loss function:</a></h3>
+<pre><code class="language-python">
     pred_y = F(real_x)
     loss = distance(pred_y, real_y)
 
@@ -208,6 +203,11 @@ def g(x: float) -&gt; float:
     optimize_function(F)
 
     return loss
+
+
+def optimize_function(F):
+    &quot;We are doing something to `F`'s parameter and hope that the function gets better&quot;
+    F.parameter = 0
 </code></pre>
 <p>We will talk about how to optimize the function in the next chapter.</p>
 <p>In practice you often see the loosely defined loss function instead of the formally defined loss function. After all it's more flexible, and is better suited to be provided as a library function. However, since models and losses are discussed all together in the optimization phase, we will use the formally defined loss function in this book.</p>
@@ -218,9 +218,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = \sum_{i=1}^n |x_i - y_i|\]
 \[x, y \in R^n \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def mae_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;MAE: mean absolute error. Mean of absolute difference.&quot;
-    return np.abs(x - y).mean().item()
+<pre><code class="language-python">    &quot;MAE: mean absolute error. Mean of absolute difference.&quot;
+    return np.abs(x - y).mean()
 </code></pre>
 <h3 id="mean-squared-error"><a class="header" href="#mean-squared-error">Mean squared error:</a></h3>
 <p>Used in classification as well as regression problems.</p>
@@ -228,9 +227,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = \sum_{i=1}^n (x_i - y_i)^2\]
 \[x, y \in R^n \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def mse_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;MSE: mean absolute error. Mean of squared difference.&quot;
-    return np.power(x - y, 2).mean().item()
+<pre><code class="language-python">    &quot;MSE: mean absolute error. Mean of squared difference.&quot;
+    return np.power(x - y, 2).mean()
 </code></pre>
 <h4 id="cross-entropy-loss"><a class="header" href="#cross-entropy-loss">Cross-entropy loss:</a></h4>
 <p>Used in classification problems only.</p>
@@ -238,9 +236,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = - \sum_{i=1}^n x_i \log_2 y_i\]
 \[x_i, y_i \in [0, 1] \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def ce_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;CE: Cross entropy. You will learn about this later.&quot;
-    return -(x * np.log2(y)).sum().item()
+<pre><code class="language-python">    &quot;CE: Cross entropy. You will learn about this later.&quot;
+    return -(x * np.log2(y)).sum()
 </code></pre>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <p>To define a good function, we have to <strong>find the loss that for this function</strong>. . To find the loss of a function, we <strong>use a loss function to find out the loss</strong>. <strong>A good loss function shows far how the output of the model is from a good output</strong>.</p>

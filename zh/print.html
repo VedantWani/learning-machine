@@ -189,9 +189,7 @@
 <p>Alternatively, we design a program that's extensible, it acts according to data it receives. It <em>learns</em> what is given to it. Now our problem of programs not doing what the users want is no more! Our program now automatically adapts to your users. And we have eliminated a lot of edge cases that we previously would have to write.</p>
 <p>An example of that would be the modern translation system. Sure, anyone knows how 'good' can be translated into 'bien' and 'morning' can be translated into 'Matin', but 'good morning' is translated into 'bonjour' instead of 'bien Matin', which doesn't make any sense! And there is just not a simple rule for it. <strong>But the power of machine learning is to generalize, and to extend it beyond what is known.</strong> With it, which we'll cover &quot;how&quot; down the book, you will see how this is done without explicitly programmed into the program.</p>
 <p>But the benefits doesn't just stop here. The generalization of machine learning is so powerful it can aid in problems where programmers often don't even know where to start. Say, telling bananas from apples. It's a simple enough task but very difficult to be described in simple constructs (if, else, for...), so much that before machine learning this is nearly impossible to do. Again, you'll see how to solve this problem with machine learning in the book.</p>
-<pre><code class="language-python">def is_apple(image: ndarray) -&gt; bool:
-    &quot;How are we supposed to do this without machine learning?&quot;
-    return False
+<pre><code class="language-python">
 </code></pre>
 <p>As there are a lot of content to cover in the whole machine learning field, in this book we will mainly cover what's especially popular in the last couple of years, deep learning. In this book, we'll use machine learning and deep learning sort of interchangabley.</p>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
@@ -210,32 +208,25 @@
 <h1 id="using-models-to-make-predictions"><a class="header" href="#using-models-to-make-predictions">Using models to make predictions</a></h1>
 <p><em>In machine learning we want to build a model (a function) to do what we want.</em></p>
 <p>You must have heard of machine learning models doing amazing things. But what exactly is a model? A model takes in some input and spit out some output. They are like functions we write in programs. You might have heard that some machine learning models know how to read a picture and translate them into words. In this case the input is the picture, and the output is the content of a picture in words we understand. Or maybe you have heard of how models can predict the stock market (while this is true, it's not that useful since the prediction may not be accurate, or else data scientists get so rich they no longer do data science), in such case the input previous days or years of share prices, the output tomorrow's share price.</p>
-<pre><code class="language-python">def finance(x: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    This is a finance bot that predicts tomorrow's share prices.
-    I mean, if you don't know how machine learning works,
+<pre><code class="language-python">    I mean, if you don't know how machine learning works,
     You cannot tell the difference between this and a real working method!
     &quot;&quot;&quot;
-    return x.sum().item()
+    return x.sum()
 </code></pre>
 <p>The possibilities of different uses of models is endless. But there are only <em>2 kinds</em> of models, <strong>classification</strong>, and <strong>regression</strong>. What are those things?</p>
 <h2 id="classification"><a class="header" href="#classification">Classification</a></h2>
 <p><em>Given some input, we want to separate those input data into different classes.</em></p>
 <p>A concrete example of the above sentence: Suppose that we have several pictures of dogs and cats, and we want to separate them into two piles. One pile for dogs, and the other for cats. In machine learning, we could simply train a <strong>classification model</strong>, and the image is transformed by the model into two categories, dogs and cats. This task is called <strong>classification</strong> by us super smart machine learning masters.</p>
-<pre><code class="language-python">def cat_or_dog(image: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    Do something smart to the image.
-    Returns a numbers to tell your confidence in the image being a cat instead of a dog.
+<pre><code class="language-python">    Returns a numbers to tell your confidence in the image being a cat instead of a dog.
     In this function how likely it is a cat is affected by the image brightness.
     Obviously not a good way.
     &quot;&quot;&quot;
     result = image.sum() / image.size
     assert 0.0 &lt;= result &lt;= 1.0
-    return result.item()
+    return result
 </code></pre>
 <p>In the above example, since there are only two categories, we can easily use a number to represent our confidence in the input being one of the classes, cats. The problem is referred to as a <strong>binary classification problem</strong>. However, what happens when there are more than two categories?</p>
-<pre><code class="language-python">def cat_dog_rabbit(image: ndarray) -&gt; ndarray:
-    &quot;&quot;&quot;
+<pre><code class="language-python">    &quot;&quot;&quot;
     There are three categories. Cats. Dogs. Rabbits.
     So normally we will output an array of length 3 showing how possible the input is of each class.
     Do note that the array sums to 1 because the sum of probablities of all possible cases is 1.
@@ -246,12 +237,9 @@
 <h2 id="regression"><a class="header" href="#regression">Regression</a></h2>
 <p><em>Given some input, we want to predict the score of the input data.</em> Usually, the score is unbounded.</p>
 <p>A concrete example of the above sentence: Suppose that we have an image of a star. We want to predict how hot is the surface (since we data scientists don't study physics and machine learning is cooler anyways), how are we going to do it?</p>
-<pre><code class="language-python">def star_temperature(image: ndarray) -&gt; float:
+<pre><code class="language-python">    since the return value does not have a range.
     &quot;&quot;&quot;
-    This function looks just like `cat_or_dog` but is actually different
-    since the return value does not have a range.
-    &quot;&quot;&quot;
-    return (10000 * image.sum() / image.size).item()
+    return 10000 * image.sum() / image.size
 </code></pre>
 <p>The output may not even be scalar. It can be an array as well! Predicting scalar is much more common though. To tell part classification from regression, just keep this in mind: <em>regression predicts value.</em></p>
 <h2 id="summary-1"><a class="header" href="#summary-1">Summary</a></h2>
@@ -259,12 +247,12 @@
 <h1 id="what-is-a-better-function"><a class="header" href="#what-is-a-better-function">What is a better function?</a></h1>
 <p><em>We need a way to tell us that a function is good.</em></p>
 <p>Let's be honest, we are learning machine learning for some serious, important, big brain things. We want the model to be as good as possible at what it does. But what is good? </p>
-<pre><code class="language-python">def f(x: float) -&gt; float:
+<pre><code class="language-python">def f(x):
     &quot;The function looks good&quot;
     return 3 * x + 5
 
 
-def g(x: float) -&gt; float:
+def g(x):
     &quot;The function also looks good&quot;
     return 8 * x - 1
 </code></pre>
@@ -273,20 +261,15 @@ def g(x: float) -&gt; float:
 <p>In machine learning, there are a lot of tasks tackling real world problems. Such as understanding images. Such as predicting the next champion team of the world cup. There are too many possibilities in the real world. To deal with that problem, scientists basically give up. They stop trying to create a new prefect model. Instead, they focus on a model that solves problems good enough. They use a scalar to determine how far away the model's prediction of a known problem is different from the right answer, it's very common to call the scalar <strong>loss</strong>.</p>
 <p>The smaller the loss, the better the function is. Usually the loss is a positive number, but occasionally we see negative losses permitted in a problem. As long a smaller loss indicates a better function. To calculate loss, we define a <strong>loss function</strong>. <em>The loss function is defined to operate on the function itself (it's a function of function) and output how good the model is. Realistically though, the loss function operates on the output of the function and determines how good that output is.</em> To further clarify what I mean</p>
 <h3 id="loosely-defined-loss-function-the-one-used-in-pytorch-tensorflow-etc"><a class="header" href="#loosely-defined-loss-function-the-one-used-in-pytorch-tensorflow-etc">Loosely defined loss function (the one used in PyTorch, TensorFlow, etc):</a></h3>
-<pre><code class="language-python">def distance(x: ndarray, y: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    This function is for calculating the distance between x and y
-    In this case, it's the squared-euclidean distance
-    &quot;&quot;&quot;
-    return ((x - y) ** 2).sum().item()
-</code></pre>
-<h3 id="formally-defined-loss-function"><a class="header" href="#formally-defined-loss-function">Formally defined loss function:</a></h3>
-<pre><code class="language-python">def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -&gt; float:
+<pre><code class="language-python">    return ((x - y) ** 2).sum()
+
+
+def loss_func(F, real_x, real_y):
     &quot;&quot;&quot;
     loss_func calls the function for you,
-    and evaluate how far in the model's output to the correct output.
-    &quot;&quot;&quot;
-
+</code></pre>
+<h3 id="formally-defined-loss-function"><a class="header" href="#formally-defined-loss-function">Formally defined loss function:</a></h3>
+<pre><code class="language-python">
     pred_y = F(real_x)
     loss = distance(pred_y, real_y)
 
@@ -294,6 +277,11 @@ def g(x: float) -&gt; float:
     optimize_function(F)
 
     return loss
+
+
+def optimize_function(F):
+    &quot;We are doing something to `F`'s parameter and hope that the function gets better&quot;
+    F.parameter = 0
 </code></pre>
 <p>We will talk about how to optimize the function in the next chapter.</p>
 <p>In practice you often see the loosely defined loss function instead of the formally defined loss function. After all it's more flexible, and is better suited to be provided as a library function. However, since models and losses are discussed all together in the optimization phase, we will use the formally defined loss function in this book.</p>
@@ -304,9 +292,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = \sum_{i=1}^n |x_i - y_i|\]
 \[x, y \in R^n \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def mae_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;MAE: mean absolute error. Mean of absolute difference.&quot;
-    return np.abs(x - y).mean().item()
+<pre><code class="language-python">    &quot;MAE: mean absolute error. Mean of absolute difference.&quot;
+    return np.abs(x - y).mean()
 </code></pre>
 <h3 id="mean-squared-error"><a class="header" href="#mean-squared-error">Mean squared error:</a></h3>
 <p>Used in classification as well as regression problems.</p>
@@ -314,9 +301,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = \sum_{i=1}^n (x_i - y_i)^2\]
 \[x, y \in R^n \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def mse_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;MSE: mean absolute error. Mean of squared difference.&quot;
-    return np.power(x - y, 2).mean().item()
+<pre><code class="language-python">    &quot;MSE: mean absolute error. Mean of squared difference.&quot;
+    return np.power(x - y, 2).mean()
 </code></pre>
 <h4 id="cross-entropy-loss"><a class="header" href="#cross-entropy-loss">Cross-entropy loss:</a></h4>
 <p>Used in classification problems only.</p>
@@ -324,9 +310,8 @@ def g(x: float) -&gt; float:
 <p>\[L(x, y) = - \sum_{i=1}^n x_i \log_2 y_i\]
 \[x_i, y_i \in [0, 1] \]</p>
 <p>Code:</p>
-<pre><code class="language-python">def ce_loss(x: ndarray, y: ndarray) -&gt; float:
-    &quot;CE: Cross entropy. You will learn about this later.&quot;
-    return -(x * np.log2(y)).sum().item()
+<pre><code class="language-python">    &quot;CE: Cross entropy. You will learn about this later.&quot;
+    return -(x * np.log2(y)).sum()
 </code></pre>
 <h2 id="summary-2"><a class="header" href="#summary-2">Summary</a></h2>
 <p>To define a good function, we have to <strong>find the loss that for this function</strong>. . To find the loss of a function, we <strong>use a loss function to find out the loss</strong>. <strong>A good loss function shows far how the output of the model is from a good output</strong>.</p>
@@ -342,12 +327,7 @@ def g(x: float) -&gt; float:
 <p>Now let's generalize the idea. Imagine our function \(f\) is no longer limited to 2 inputs. Let's substitute \(f\) for a loss function \(L\) we discussed last chapter (the formal one). </p>
 <p>The input is a function \(f\) that we want to optimize (the ball that we want to roll down the hill), and a pair of inputs \((x, y)\), given that \(n \in N\), \(x, y \in R^n\)</p>
 <p>Remember that we've said over and over that the function is determined by it's parameters? To optimize a function, we optimize its parameter. In this case, <strong>the function parameters</strong> is the position of the ball, and the <strong>loss function output</strong> is the value we want to minimize.</p>
-<pre><code class="language-python">def loss_func(F: Callable, real_x: ndarray, real_y: ndarray) -&gt; float:
-    &quot;&quot;&quot;
-    loss_func calls the function for you,
-    and evaluate how far in the model's output to the correct output.
-    &quot;&quot;&quot;
-
+<pre><code class="language-python">
     pred_y = F(real_x)
     loss = distance(pred_y, real_y)
 
@@ -357,7 +337,7 @@ def g(x: float) -&gt; float:
     return loss
 
 
-def optimize_function(F: Callable):
+def optimize_function(F):
     &quot;We are doing something to `F`'s parameter and hope that the function gets better&quot;
     F.parameter = 0
 </code></pre>
@@ -375,12 +355,7 @@ def optimize_function(F: Callable):
 <p><em>You can think of gradient as the steepest way uphill.</em> If you move along the gradient, you can increase the function value the fastest, in this case, you will increase the <strong>loss</strong>. So usually we want to move in the opposite direction of the gradient at a point (remember we are minimizing the function?). If we always move to the opposite direction of the gradient, we will eventually get a (local) minimum value of the function, we call this <strong>stochastic gradient descent</strong>.</p>
 <h3 id="stochastic-gradient-descent"><a class="header" href="#stochastic-gradient-descent">Stochastic gradient descent</a></h3>
 <p>Stochastic gradient descent is the most common gradient descent method, and the most basic one. It involves only 3 variables, \(x, y, lr, iter\). \(x\) is your input variable, \(y\) is your output variable, and \(lr\), learning rate, is a scalar showing how far you can move in one iteration. You repeat \(iter\) iterations. For the ultimate quality we would want \(lr\) to be as small as possible (to not jump too far because you want to follow the terrain), and as many \(iter\) as possible (to ensure that the minimum is obtained). But it's not possible to do so in practice. Selecting \(lr\) and \(iter\) has become more art than science, and is often called <strong>hyperparameter tuning</strong> (parameter is for functions).</p>
-<pre><code class="language-python">def loss_func(x: ndarray, y: ndarray) -&gt; float:
-    &quot;What does the terrain look like? It looks like a bowl, the closer to the center the lower.&quot;
-    return mse_loss.mse_loss(x, y)
-
-
-def sgd_once(x: ndarray, y: ndarray, lr: float):
+<pre><code class="language-python">def sgd_once(x, y, lr):
     &quot;&quot;&quot;
     sgd stands for stochastic gradient descent.
     It moves in the direct opposite of the gradient.
@@ -415,7 +390,7 @@ def sgd(x: ndarray, y: ndarray, lr: float, iter: int):
 <p>Code:</p>
 <pre><code class="language-python">class Linear(object):
     &quot;A linear model has the form F(x) = W @ X + B&quot;
-    Grad = NamedTuple(&quot;Grad&quot;, [(&quot;w&quot;, ndarray), (&quot;b&quot;, ndarray)])
+    Grad = namedtuple(&quot;Grad&quot;, [&quot;w&quot;, &quot;b&quot;])
 
     def __init__(self, m: int, n: int):
         &quot;&quot;&quot;
@@ -439,12 +414,12 @@ def sgd(x: ndarray, y: ndarray, lr: float, iter: int):
 <pre><code class="language-python">    # Continued from the previous definition
 
     @staticmethod
-    def loss_func(x: ndarray, y: ndarray) -&gt; float:
+    def loss_func(x, y):
         &quot;Calculate the loss between `x` and `y`&quot;
         squared = (x - y) ** 2
-        return squared.sum().item()
+        return squared.sum()
 
-    def loss(self, real_x: ndarray, real_y: ndarray) -&gt; float:
+    def loss(self, real_x, real_y):
         &quot;Calculate the loss given a pair of real data&quot;
 
         # Calling the above defined `__call__` method
@@ -468,7 +443,7 @@ def sgd(x: ndarray, y: ndarray, lr: float, iter: int):
 <p>Code:</p>
 <pre><code class="language-python">    # Continued from the previous definition
 
-    def gradient(self, real_x: ndarray, real_y: ndarray) -&gt; Tuple[ndarray]:
+    def gradient(self, real_x, real_y):
         &quot;Calculate the gradient&quot;
 
         # Calling the above defined `__call__` method
@@ -485,7 +460,7 @@ def sgd(x: ndarray, y: ndarray, lr: float, iter: int):
 
         return Linear.Grad(w=W_grad, b=B_grad)
 
-    def train(self, real_x: ndarray, real_y: ndarray, lr: float):
+    def train(self, real_x, real_y, lr):
         &quot;This is what people call training a model&quot;
         grad = self.gradient(real_x, real_y)
 

@@ -177,7 +177,7 @@
 <p>Code:</p>
 <pre><code class="language-python">class Linear(object):
     &quot;A linear model has the form F(x) = W @ X + B&quot;
-    Grad = NamedTuple(&quot;Grad&quot;, [(&quot;w&quot;, ndarray), (&quot;b&quot;, ndarray)])
+    Grad = namedtuple(&quot;Grad&quot;, [&quot;w&quot;, &quot;b&quot;])
 
     def __init__(self, m: int, n: int):
         &quot;&quot;&quot;
@@ -201,12 +201,12 @@
 <pre><code class="language-python">    # Continued from the previous definition
 
     @staticmethod
-    def loss_func(x: ndarray, y: ndarray) -&gt; float:
+    def loss_func(x, y):
         &quot;Calculate the loss between `x` and `y`&quot;
         squared = (x - y) ** 2
-        return squared.sum().item()
+        return squared.sum()
 
-    def loss(self, real_x: ndarray, real_y: ndarray) -&gt; float:
+    def loss(self, real_x, real_y):
         &quot;Calculate the loss given a pair of real data&quot;
 
         # Calling the above defined `__call__` method
@@ -230,7 +230,7 @@
 <p>Code:</p>
 <pre><code class="language-python">    # Continued from the previous definition
 
-    def gradient(self, real_x: ndarray, real_y: ndarray) -&gt; Tuple[ndarray]:
+    def gradient(self, real_x, real_y):
         &quot;Calculate the gradient&quot;
 
         # Calling the above defined `__call__` method
@@ -247,7 +247,7 @@
 
         return Linear.Grad(w=W_grad, b=B_grad)
 
-    def train(self, real_x: ndarray, real_y: ndarray, lr: float):
+    def train(self, real_x, real_y, lr):
         &quot;This is what people call training a model&quot;
         grad = self.gradient(real_x, real_y)
 
