@@ -5,55 +5,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gradients &#8212; Learning Machine</title>
+    <title>Normalization Layer &#8212; Learning Machine</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/basic/gradients.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Types of tasks" href="../tasks/tasks.html" />
-    <link rel="prev" title="Differentiable" href="differentiable.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://rentruewang.github.io/layers/norm/norm.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Padding Layer" href="../padding/padding.html" />
+    <link rel="prev" title="Dropout Layer" href="../dropout/dropout.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -70,15 +70,15 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Learning Machine</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -88,19 +88,19 @@
   Getting started
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="basic.html">
+  <a class="reference internal" href="../../basic/basic.html">
    Getting Started
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="differentiable.html">
+  <a class="reference internal" href="../../basic/differentiable.html">
    Differentiable
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic/gradients.html">
    Gradients
   </a>
  </li>
@@ -112,12 +112,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../tasks/tasks.html">
+  <a class="reference internal" href="../../tasks/tasks.html">
    Types of tasks
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tasks/regression/regression.html">
+  <a class="reference internal" href="../../tasks/regression/regression.html">
    Regression
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -127,14 +127,14 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../tasks/regression/em-algo.html">
+    <a class="reference internal" href="../../tasks/regression/em-algo.html">
      Expectation-Maximization Algorithm
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tasks/classification/classification.html">
+  <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -144,7 +144,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../tasks/classification/gmm.html">
+    <a class="reference internal" href="../../tasks/classification/gmm.html">
      Gaussian Mixture Model
     </a>
    </li>
@@ -156,49 +156,49 @@
   Common Building Blocks
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/layers.html">
+  <a class="reference internal" href="../layers.html">
    Common Build Blocks, or Layers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/linear/linear.html">
+  <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/cnn/cnn.html">
+  <a class="reference internal" href="../cnn/cnn.html">
    Convolution Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/rnn/rnn.html">
+  <a class="reference internal" href="../rnn/rnn.html">
    Recurrent Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/dropout/dropout.html">
+  <a class="reference internal" href="../dropout/dropout.html">
    Dropout Layer
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../layers/norm/norm.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Normalization Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/padding/padding.html">
+  <a class="reference internal" href="../padding/padding.html">
    Padding Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers/pooling/pooling.html">
+  <a class="reference internal" href="../pooling/pooling.html">
    Pooling Layer
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../layers/transformer/transformer.html">
+  <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -208,7 +208,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../layers/transformer/attn/attn.html">
+    <a class="reference internal" href="../transformer/attn/attn.html">
      Self Attention Layer
     </a>
    </li>
@@ -222,7 +222,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../generative/ae/ae.html">
+  <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -232,14 +232,14 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../generative/ae/vae/vae.html">
+    <a class="reference internal" href="../../generative/ae/vae/vae.html">
      Variational AutoEncoder Model
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../generative/gan/gan.html">
+  <a class="reference internal" href="../../generative/gan/gan.html">
    Generative Adversarial Models
   </a>
  </li>
@@ -284,7 +284,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/basic/gradients.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/norm/norm.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -304,10 +304,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fbasic/gradients.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/norm/norm.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/basic/gradients.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/norm/norm.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -335,8 +335,8 @@
         
               <div>
                 
-  <div class="section" id="gradients">
-<h1>Gradients<a class="headerlink" href="#gradients" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="normalization-layer">
+<h1>Normalization Layer<a class="headerlink" href="#normalization-layer" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -352,7 +352,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./basic"
+            path: "./layers/norm"
         },
         predefinedOutput: true
     }
@@ -364,8 +364,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="differentiable.html" title="previous page">Differentiable</a>
-    <a class='right-next' id="next-link" href="../tasks/tasks.html" title="next page">Types of tasks</a>
+    <a class='left-prev' id="prev-link" href="../dropout/dropout.html" title="previous page">Dropout Layer</a>
+    <a class='right-next' id="next-link" href="../padding/padding.html" title="next page">Padding Layer</a>
 
         </div>
         
@@ -387,7 +387,7 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
   </body>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gradients &#8212; Learning Machine</title>
+    <title>Types of tasks &#8212; Learning Machine</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,11 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/basic/gradients.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/tasks/tasks.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Types of tasks" href="../tasks/tasks.html" />
-    <link rel="prev" title="Differentiable" href="differentiable.html" />
+    <link rel="next" title="Regression" href="regression/regression.html" />
+    <link rel="prev" title="Gradients" href="../basic/gradients.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,19 +88,19 @@
   Getting started
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="basic.html">
+  <a class="reference internal" href="../basic/basic.html">
    Getting Started
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="differentiable.html">
+  <a class="reference internal" href="../basic/differentiable.html">
    Differentiable
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basic/gradients.html">
    Gradients
   </a>
  </li>
@@ -110,14 +110,14 @@
   Common Tasks
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../tasks/tasks.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Types of tasks
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tasks/regression/regression.html">
+  <a class="reference internal" href="regression/regression.html">
    Regression
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -127,14 +127,14 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../tasks/regression/em-algo.html">
+    <a class="reference internal" href="regression/em-algo.html">
      Expectation-Maximization Algorithm
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tasks/classification/classification.html">
+  <a class="reference internal" href="classification/classification.html">
    Classification
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -144,7 +144,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../tasks/classification/gmm.html">
+    <a class="reference internal" href="classification/gmm.html">
      Gaussian Mixture Model
     </a>
    </li>
@@ -284,7 +284,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/basic/gradients.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tasks/tasks.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -304,10 +304,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fbasic/gradients.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Ftasks/tasks.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/basic/gradients.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/tasks/tasks.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -335,8 +335,8 @@
         
               <div>
                 
-  <div class="section" id="gradients">
-<h1>Gradients<a class="headerlink" href="#gradients" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="types-of-tasks">
+<h1>Types of tasks<a class="headerlink" href="#types-of-tasks" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -352,7 +352,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./basic"
+            path: "./tasks"
         },
         predefinedOutput: true
     }
@@ -364,8 +364,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="differentiable.html" title="previous page">Differentiable</a>
-    <a class='right-next' id="next-link" href="../tasks/tasks.html" title="next page">Types of tasks</a>
+    <a class='left-prev' id="prev-link" href="../basic/gradients.html" title="previous page">Gradients</a>
+    <a class='right-next' id="next-link" href="regression/regression.html" title="next page">Regression</a>
 
         </div>
         
