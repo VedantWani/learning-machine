@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transformer Block &#8212; Learning Machine</title>
+    <title>How are gradients calculated in deep learning systems? &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,11 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/layers/transformer/transformer.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/basic/gradients/torch-cal-grads.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Self Attention Layer" href="attn/attn.html" />
-    <link rel="prev" title="Pooling Layer" href="../pooling/pooling.html" />
+    <link rel="next" title="Types of tasks" href="../../tasks/tasks.html" />
+    <link rel="prev" title="Do loss functions have to be differentiable?" href="loss-fn-derivative.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,34 +88,34 @@
   Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/basic.html">
+  <a class="reference internal" href="../basic.html">
    Getting Started
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/approx/approx.html">
+  <a class="reference internal" href="../approx/approx.html">
    Approximation models
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../basic/gradients/gradients.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="gradients.html">
    Gradients
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basic/gradients/loss-fn-derivative.html">
+    <a class="reference internal" href="loss-fn-derivative.html">
      Do loss functions have to be differentiable?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../basic/gradients/torch-cal-grads.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      How are gradients calculated in deep learning systems?
     </a>
    </li>
@@ -173,14 +173,14 @@
   Common Building Blocks
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../layers.html">
+  <a class="reference internal" href="../../layers/layers.html">
    Layers
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../linear/linear.html">
+  <a class="reference internal" href="../../layers/linear/linear.html">
    Linear Layer
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -190,64 +190,64 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../linear/linear-grad.html">
+    <a class="reference internal" href="../../layers/linear/linear-grad.html">
      Calculate gradients for Linear Layers
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../cnn/cnn.html">
+  <a class="reference internal" href="../../layers/cnn/cnn.html">
    Convolution Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../rnn/rnn.html">
+  <a class="reference internal" href="../../layers/rnn/rnn.html">
    Recurrent Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../emb/emb.html">
+  <a class="reference internal" href="../../layers/emb/emb.html">
    Embedding Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../dropout/dropout.html">
+  <a class="reference internal" href="../../layers/dropout/dropout.html">
    Dropout Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../norm/norm.html">
+  <a class="reference internal" href="../../layers/norm/norm.html">
    Normalization Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../padding/padding.html">
+  <a class="reference internal" href="../../layers/padding/padding.html">
    Padding Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../pooling/pooling.html">
+  <a class="reference internal" href="../../layers/pooling/pooling.html">
    Pooling Layer
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="attn/attn.html">
+    <a class="reference internal" href="../../layers/transformer/attn/attn.html">
      Self Attention Layer
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="transformer-vs-rnn.html">
+    <a class="reference internal" href="../../layers/transformer/transformer-vs-rnn.html">
      Transformer vs RNN
     </a>
    </li>
@@ -328,7 +328,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/transformer/transformer.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/basic/gradients/torch-cal-grads.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -348,10 +348,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/transformer/transformer.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fbasic/gradients/torch-cal-grads.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/transformer/transformer.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/basic/gradients/torch-cal-grads.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -371,19 +371,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-do-transformers-do">
-   What do transformers do?
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -392,12 +379,11 @@
         
               <div>
                 
-  <div class="section" id="transformer-block">
-<h1>Transformer Block<a class="headerlink" href="#transformer-block" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-do-transformers-do">
-<h2>What do transformers do?<a class="headerlink" href="#what-do-transformers-do" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="how-are-gradients-calculated-in-deep-learning-systems">
+<h1>How are gradients calculated in deep learning systems?<a class="headerlink" href="#how-are-gradients-calculated-in-deep-learning-systems" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This explanation will focus on how PyTorch calculates gradients. Recently TensorFlow has switched to the same model so the method seems pretty good.</p>
 </div>
 </div>
 
@@ -414,7 +400,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./layers/transformer"
+            path: "./basic/gradients"
         },
         predefinedOutput: true
     }
@@ -426,8 +412,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../pooling/pooling.html" title="previous page">Pooling Layer</a>
-    <a class='right-next' id="next-link" href="attn/attn.html" title="next page">Self Attention Layer</a>
+    <a class='left-prev' id="prev-link" href="loss-fn-derivative.html" title="previous page">Do loss functions have to be differentiable?</a>
+    <a class='right-next' id="next-link" href="../../tasks/tasks.html" title="next page">Types of tasks</a>
 
         </div>
         

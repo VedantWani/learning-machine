@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/basic/basic.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Differentiable" href="differentiable.html" />
+    <link rel="next" title="Approximation models" href="approx/approx.html" />
     <link rel="prev" title="Introduction" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,14 +95,31 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="differentiable.html">
-   Differentiable
+  <a class="reference internal" href="approx/approx.html">
+   Approximation models
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gradients.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="gradients/gradients.html">
    Gradients
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gradients/loss-fn-derivative.html">
+     Do loss functions have to be differentiable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gradients/torch-cal-grads.html">
+     How are gradients calculated in deep learning systems?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -120,8 +137,8 @@
   <a class="reference internal" href="../tasks/regression/regression.html">
    Regression
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -137,8 +154,8 @@
   <a class="reference internal" href="../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -159,13 +176,25 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../layers/layers.html">
-   Common Build Blocks, or Layers
+   Layers
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../layers/linear/linear.html">
    Linear Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layers/linear/linear-grad.html">
+     Calculate gradients for Linear Layers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../layers/cnn/cnn.html">
@@ -175,6 +204,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../layers/rnn/rnn.html">
    Recurrent Layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../layers/emb/emb.html">
+   Embedding Layer
   </a>
  </li>
  <li class="toctree-l1">
@@ -201,8 +235,8 @@
   <a class="reference internal" href="../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -210,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../layers/transformer/attn/attn.html">
      Self Attention Layer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layers/transformer/transformer-vs-rnn.html">
+     Transformer vs RNN
     </a>
    </li>
   </ul>
@@ -221,12 +260,17 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../generative/generative.html">
+   Generative Models
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -327,6 +371,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preface">
+   Preface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-this-book">
+   How to use this book?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-learn-machine">
+   Why learn machine?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -337,6 +404,22 @@
                 
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h2>
+<p>In this book, we’re mainly focused on deep learning, which is a branch of machine learning that leverages of a lot of computing power and yield incredible result. Sometimes it’s called artificial intelligence.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AI (artificial intelligence), ML (machine learning), DL (deep learning). This book use these terms interchangeably. They are not equal terms outside of this book, however, in the subset we cover in this book they can be seen as equal.</p>
+</div>
+</div>
+<div class="section" id="how-to-use-this-book">
+<h2>How to use this book?<a class="headerlink" href="#how-to-use-this-book" title="Permalink to this headline">¶</a></h2>
+<!-- TODO: -->
+</div>
+<div class="section" id="why-learn-machine">
+<h2>Why learn machine?<a class="headerlink" href="#why-learn-machine" title="Permalink to this headline">¶</a></h2>
+<p>There are many reason to learn machine. The most obvious reason is that machine learning is quite powerful and useful, and many systems use it ranging from Google’s search to snapchat filters. Secondly, it’s quite the rage nowadays, so it certainly would help you in landing a prestigious job. Thirdly, in the case where robots take over the world (like Elon Musk feared), having learned machines’ ways of dealing things may be your only path to survival! Jokes aside, learning machine does help to calm your nerves since most of the theories on the Internet about robots are just over the top. And learning machine helps preventing you from being tricked by those deceptive information.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -365,7 +448,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
-    <a class='right-next' id="next-link" href="differentiable.html" title="next page">Differentiable</a>
+    <a class='right-next' id="next-link" href="approx/approx.html" title="next page">Approximation models</a>
 
         </div>
         

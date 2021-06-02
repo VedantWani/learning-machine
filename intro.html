@@ -94,14 +94,31 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="basic/differentiable.html">
-   Differentiable
+  <a class="reference internal" href="basic/approx/approx.html">
+   Approximation models
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="basic/gradients.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="basic/gradients/gradients.html">
    Gradients
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic/gradients/loss-fn-derivative.html">
+     Do loss functions have to be differentiable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic/gradients/torch-cal-grads.html">
+     How are gradients calculated in deep learning systems?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -119,8 +136,8 @@
   <a class="reference internal" href="tasks/regression/regression.html">
    Regression
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -136,8 +153,8 @@
   <a class="reference internal" href="tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -158,13 +175,25 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="layers/layers.html">
-   Common Build Blocks, or Layers
+   Layers
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="layers/linear/linear.html">
    Linear Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layers/linear/linear-grad.html">
+     Calculate gradients for Linear Layers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="layers/cnn/cnn.html">
@@ -174,6 +203,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="layers/rnn/rnn.html">
    Recurrent Layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="layers/emb/emb.html">
+   Embedding Layer
   </a>
  </li>
  <li class="toctree-l1">
@@ -200,8 +234,8 @@
   <a class="reference internal" href="layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -209,6 +243,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="layers/transformer/attn/attn.html">
      Self Attention Layer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layers/transformer/transformer-vs-rnn.html">
+     Transformer vs RNN
     </a>
    </li>
   </ul>
@@ -220,12 +259,17 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="generative/generative.html">
+   Generative Models
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -326,6 +370,31 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-this-book">
+   Why this Book?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-this-book">
+   What is this book?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-this-book">
+   How to use this book?
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -336,6 +405,18 @@
                 
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>[](TODO: Add more descriptions)</p>
+<div class="section" id="why-this-book">
+<h2>Why this Book?<a class="headerlink" href="#why-this-book" title="Permalink to this headline">¶</a></h2>
+<p>Machine learning tutorials are literally everywhere. However, nearly all of the tutorials are either for academics, or for complete noobs.</p>
+</div>
+<div class="section" id="what-is-this-book">
+<h2>What is this book?<a class="headerlink" href="#what-is-this-book" title="Permalink to this headline">¶</a></h2>
+<p>This book is for people who like to learn machine learning with concrete answers and intuitions.</p>
+</div>
+<div class="section" id="how-to-use-this-book">
+<h2>How to use this book?<a class="headerlink" href="#how-to-use-this-book" title="Permalink to this headline">¶</a></h2>
+<p>Don’t use this book as a reference, use it as a manual instead. We’ll cover all the basics.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -343,6 +424,7 @@
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 

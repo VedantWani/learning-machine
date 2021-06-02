@@ -53,7 +53,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Normalization Layer" href="../norm/norm.html" />
-    <link rel="prev" title="Recurrent Layer" href="../rnn/rnn.html" />
+    <link rel="prev" title="Embedding Layer" href="../emb/emb.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,14 +95,31 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/differentiable.html">
-   Differentiable
+  <a class="reference internal" href="../../basic/approx/approx.html">
+   Approximation models
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/gradients.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basic/gradients/gradients.html">
    Gradients
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic/gradients/loss-fn-derivative.html">
+     Do loss functions have to be differentiable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic/gradients/torch-cal-grads.html">
+     How are gradients calculated in deep learning systems?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -120,8 +137,8 @@
   <a class="reference internal" href="../../tasks/regression/regression.html">
    Regression
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -137,8 +154,8 @@
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -159,13 +176,25 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../layers.html">
-   Common Build Blocks, or Layers
+   Layers
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linear/linear-grad.html">
+     Calculate gradients for Linear Layers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../cnn/cnn.html">
@@ -175,6 +204,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../rnn/rnn.html">
    Recurrent Layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../emb/emb.html">
+   Embedding Layer
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -201,8 +235,8 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -210,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
      Self Attention Layer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../transformer/transformer-vs-rnn.html">
+     Transformer vs RNN
     </a>
    </li>
   </ul>
@@ -221,12 +260,17 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../generative/generative.html">
+   Generative Models
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -327,6 +371,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-dropout-layers">
+   What are dropout layers?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-dropout-layers-work">
+   Why do dropout layers work?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -337,6 +399,13 @@
                 
   <div class="section" id="dropout-layer">
 <h1>Dropout Layer<a class="headerlink" href="#dropout-layer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-are-dropout-layers">
+<h2>What are dropout layers?<a class="headerlink" href="#what-are-dropout-layers" title="Permalink to this headline">¶</a></h2>
+<p>Dropout layers intentionally some values passed in.</p>
+</div>
+<div class="section" id="why-do-dropout-layers-work">
+<h2>Why do dropout layers work?<a class="headerlink" href="#why-do-dropout-layers-work" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -364,7 +433,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../rnn/rnn.html" title="previous page">Recurrent Layer</a>
+    <a class='left-prev' id="prev-link" href="../emb/emb.html" title="previous page">Embedding Layer</a>
     <a class='right-next' id="next-link" href="../norm/norm.html" title="next page">Normalization Layer</a>
 
         </div>

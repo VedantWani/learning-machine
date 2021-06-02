@@ -95,14 +95,31 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/differentiable.html">
-   Differentiable
+  <a class="reference internal" href="../../basic/approx/approx.html">
+   Approximation models
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../basic/gradients.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basic/gradients/gradients.html">
    Gradients
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic/gradients/loss-fn-derivative.html">
+     Do loss functions have to be differentiable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic/gradients/torch-cal-grads.html">
+     How are gradients calculated in deep learning systems?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -120,8 +137,8 @@
   <a class="current reference internal" href="#">
    Regression
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -137,8 +154,8 @@
   <a class="reference internal" href="../classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -159,13 +176,25 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../layers/layers.html">
-   Common Build Blocks, or Layers
+   Layers
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../layers/linear/linear.html">
    Linear Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/linear/linear-grad.html">
+     Calculate gradients for Linear Layers
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../layers/cnn/cnn.html">
@@ -175,6 +204,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../layers/rnn/rnn.html">
    Recurrent Layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../layers/emb/emb.html">
+   Embedding Layer
   </a>
  </li>
  <li class="toctree-l1">
@@ -201,8 +235,8 @@
   <a class="reference internal" href="../../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -210,6 +244,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../layers/transformer/attn/attn.html">
      Self Attention Layer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/transformer/transformer-vs-rnn.html">
+     Transformer vs RNN
     </a>
    </li>
   </ul>
@@ -221,12 +260,17 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../generative/generative.html">
+   Generative Models
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
