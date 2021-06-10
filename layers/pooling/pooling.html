@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/layers/pooling/pooling.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -133,29 +135,17 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
-   Regression
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/em-algo.html">
+   Expectation-Maximization Algorithm
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tasks/regression/em-algo.html">
-     Expectation-Maximization Algorithm
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -183,8 +173,8 @@
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +225,15 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
-     Self Attention Layer
+     Attention
     </a>
    </li>
    <li class="toctree-l2">
@@ -269,8 +259,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -328,9 +318,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/pooling/pooling.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/pooling/pooling.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -351,7 +341,7 @@
             href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/pooling/pooling.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/pooling/pooling.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/pooling/pooling.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -377,18 +367,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-do-pooling-layers-do">
-   What do pooling layers do?
+  <a class="reference internal nav-link" href="#what-are-pooling-layers">
+   What are pooling layers?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#when-to-use-pooling-layers">
    When to use pooling layers?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-pooling-layers-work">
-   How do pooling layers work?
   </a>
  </li>
 </ul>
@@ -404,14 +389,14 @@
                 
   <div class="section" id="pooling-layer">
 <h1>Pooling Layer<a class="headerlink" href="#pooling-layer" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-do-pooling-layers-do">
-<h2>What do pooling layers do?<a class="headerlink" href="#what-do-pooling-layers-do" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-are-pooling-layers">
+<h2>What are pooling layers?<a class="headerlink" href="#what-are-pooling-layers" title="Permalink to this headline">¶</a></h2>
+<p>A pooling layer generates an output from a ‘pool’, such as a <span class="math notranslate nohighlight">\( 2 \times 2 \)</span> block, usually by selecting from that block. For example, commonly used pooling layers include max-pooling, which retains the maximum of every <span class="math notranslate nohighlight">\( 2 \times 2 \)</span> block. But there are also some fewer used layers like average pooling, which takes an weighted average from the block (acts a lot like a convolution layer).</p>
 </div>
 <div class="section" id="when-to-use-pooling-layers">
 <h2>When to use pooling layers?<a class="headerlink" href="#when-to-use-pooling-layers" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="how-do-pooling-layers-work">
-<h2>How do pooling layers work?<a class="headerlink" href="#how-do-pooling-layers-work" title="Permalink to this headline">¶</a></h2>
+<p>Use pooling layers when you want to drasically reduce the input size. For example, <span class="math notranslate nohighlight">\( 2 \times 2 \)</span> blocks reduce the height and the width by 2 times.
+Pooling layers also have the meaning of ‘focusing on the best part’. When you’re using a pooling layer, you usually don’t care about individual points in the input, but whether there’s something special in one region of the input.</p>
 </div>
 </div>
 

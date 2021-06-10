@@ -133,29 +133,17 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
-   Regression
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/em-algo.html">
+   Expectation-Maximization Algorithm
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tasks/regression/em-algo.html">
-     Expectation-Maximization Algorithm
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -183,8 +171,8 @@
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +223,15 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
-     Self Attention Layer
+     Attention
     </a>
    </li>
    <li class="toctree-l2">
@@ -269,8 +257,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -328,9 +316,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/emb/emb.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/emb/emb.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -351,7 +339,7 @@
             href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/emb/emb.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/emb/emb.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/emb/emb.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -377,8 +365,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-embedding-layers">
-   What are embedding layers?
+  <a class="reference internal nav-link" href="#what-do-embedding-layers-do">
+   What do embedding layers do?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-to-use-embedding-layers">
+   When to use embedding layers?
   </a>
  </li>
 </ul>
@@ -394,8 +387,13 @@
                 
   <div class="section" id="embedding-layer">
 <h1>Embedding Layer<a class="headerlink" href="#embedding-layer" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-are-embedding-layers">
-<h2>What are embedding layers?<a class="headerlink" href="#what-are-embedding-layers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-do-embedding-layers-do">
+<h2>What do embedding layers do?<a class="headerlink" href="#what-do-embedding-layers-do" title="Permalink to this headline">¶</a></h2>
+<p>Embedding layers convert a token (an integer) to a vector (a list of floating point numbers).</p>
+</div>
+<div class="section" id="when-to-use-embedding-layers">
+<h2>When to use embedding layers?<a class="headerlink" href="#when-to-use-embedding-layers" title="Permalink to this headline">¶</a></h2>
+<p>When you want to process text. Text can be converted to integers, but because neural networks are don’t directly understand integers (because they are based on gradients, and you can’t compute gradients on integers), you have to use embedding layers to convert those integers into a list of ‘features’. For example, if one of the dimension shows how red the word is, then apple should score a lot higher than banana in that dimension.</p>
 </div>
 </div>
 

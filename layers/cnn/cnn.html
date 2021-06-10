@@ -133,29 +133,17 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
-   Regression
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/em-algo.html">
+   Expectation-Maximization Algorithm
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tasks/regression/em-algo.html">
-     Expectation-Maximization Algorithm
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -183,8 +171,8 @@
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +223,15 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
-     Self Attention Layer
+     Attention
     </a>
    </li>
    <li class="toctree-l2">
@@ -269,8 +257,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -328,9 +316,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/cnn/cnn.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/cnn/cnn.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -351,7 +339,7 @@
             href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/cnn/cnn.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/cnn/cnn.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/cnn/cnn.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -377,8 +365,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#when-to-use-convolution-layers">
-   When to use convolution layers?
+  <a class="reference internal nav-link" href="#what-do-convolution-layers-do">
+   What do convolution layers do?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-to-use-a-convolution-layer">
+   When to use a convolution layer?
   </a>
  </li>
 </ul>
@@ -396,15 +389,17 @@
 <h1>Convolution Layer<a class="headerlink" href="#convolution-layer" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We will refer to Convolution Neural Networks as CNN.</p>
+<p>A neural network that use convolution layers is often called a CNN, a convolution neural network.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will also refer to Convolution Layers as CNN.</p>
+<div class="section" id="what-do-convolution-layers-do">
+<h2>What do convolution layers do?<a class="headerlink" href="#what-do-convolution-layers-do" title="Permalink to this headline">¶</a></h2>
+<p>Taking image processing for example, a convolution layer compute the local features (whether there’s an edge here, a dot there, etc), and aggregate the result into another image, which can sometimes be visualized.
+There are different kinds of convolution layers. We often use the 1-dimension version for text processing, 2-dimension version for image processing (most common).</p>
 </div>
-<div class="section" id="when-to-use-convolution-layers">
-<h2>When to use convolution layers?<a class="headerlink" href="#when-to-use-convolution-layers" title="Permalink to this headline">¶</a></h2>
-<p>CNNs are used when working with data that have geometric meanings,</p>
+<div class="section" id="when-to-use-a-convolution-layer">
+<h2>When to use a convolution layer?<a class="headerlink" href="#when-to-use-a-convolution-layer" title="Permalink to this headline">¶</a></h2>
+<p>Convolution layers are often used to directly process inputs, which means they are often places in the front of a model.
+Use of convolution in image processing is very common (usually paired with linear layers and pooling layers for classification). Convolution layers are also quite common in text processing.</p>
 </div>
 </div>
 

@@ -133,29 +133,17 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
-   Regression
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/em-algo.html">
+   Expectation-Maximization Algorithm
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tasks/regression/em-algo.html">
-     Expectation-Maximization Algorithm
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -183,8 +171,8 @@
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +223,15 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
-     Self Attention Layer
+     Attention
     </a>
    </li>
    <li class="toctree-l2">
@@ -269,8 +257,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -328,9 +316,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/padding/padding.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/padding/padding.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -351,7 +339,7 @@
             href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/padding/padding.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/padding/padding.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/padding/padding.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -401,9 +389,12 @@
 <h1>Padding Layer<a class="headerlink" href="#padding-layer" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-do-padding-layers-do">
 <h2>What do padding layers do?<a class="headerlink" href="#what-do-padding-layers-do" title="Permalink to this headline">¶</a></h2>
+<p>Padding layers pad special values to your input. Usually padding layers are used on images, to pad the edge pixels such that the convolution filters can move all the way to the edge of the image.
+There are several ways to pad. Most common ways include padding 0 values, or mirror padding. 0 padding is self-explanatory, and mirror padding is like having a little mirror on the edge of your image. The padded pixels ‘mirror’ the real pixels.</p>
 </div>
 <div class="section" id="when-to-use-padding-layers">
 <h2>When to use padding layers?<a class="headerlink" href="#when-to-use-padding-layers" title="Permalink to this headline">¶</a></h2>
+<p>Almost always when you are using a convolution-based model. Due to the nature of sliding convolution filters, you don’t really have an alternative to padding layers if you want the convolution window to slide all the way to the edge.</p>
 </div>
 </div>
 

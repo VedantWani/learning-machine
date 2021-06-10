@@ -135,29 +135,17 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
-   Regression
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/em-algo.html">
+   Expectation-Maximization Algorithm
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tasks/regression/em-algo.html">
-     Expectation-Maximization Algorithm
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -185,8 +173,8 @@
   <a class="current reference internal" href="#">
    Linear Layer
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -237,15 +225,15 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../transformer/attn/attn.html">
-     Self Attention Layer
+     Attention
     </a>
    </li>
    <li class="toctree-l2">
@@ -271,8 +259,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -330,9 +318,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/layers/linear/linear.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/layers/linear/linear.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -353,7 +341,7 @@
             href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/linear/linear.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/linear/linear.md"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/linear/linear.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -367,6 +355,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/layers/linear/linear.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -393,6 +398,11 @@
    How does a linear layer work?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-layers-in-code">
+   Linear layers in code?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -412,7 +422,7 @@
 </div>
 <div class="section" id="what-do-linear-layers-do">
 <h2>What do linear layers do?<a class="headerlink" href="#what-do-linear-layers-do" title="Permalink to this headline">¶</a></h2>
-<p>A linear layer transforms a vector into another vector. For example, you can transform a vector [1, 2, 3] to [1, 2, 3, 4] with a linear layer.</p>
+<p>A linear layer transforms a vector into another vector. For example, you can transform a vector <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> to <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> with a linear layer.</p>
 </div>
 <div class="section" id="when-to-use-linear-layers">
 <h2>When to use linear layers?<a class="headerlink" href="#when-to-use-linear-layers" title="Permalink to this headline">¶</a></h2>
@@ -426,8 +436,58 @@
 <h2>How does a linear layer work?<a class="headerlink" href="#how-does-a-linear-layer-work" title="Permalink to this headline">¶</a></h2>
 <p>There are two components in a linear layer. A weight <span class="math notranslate nohighlight">\( W \)</span>, and a bias <span class="math notranslate nohighlight">\( B \)</span>. If the input of a linear layer is a vector <span class="math notranslate nohighlight">\( X \)</span>, then the output is <span class="math notranslate nohighlight">\( W X + B \)</span>.</p>
 <p>If the linear layer transforms a vector of dimension <span class="math notranslate nohighlight">\( N \)</span> to dimension <span class="math notranslate nohighlight">\( M \)</span>, then <span class="math notranslate nohighlight">\( W \)</span> is a <span class="math notranslate nohighlight">\( M \times N \)</span> matrix, <span class="math notranslate nohighlight">\( X \)</span> is of dimension <span class="math notranslate nohighlight">\( N \)</span>, <span class="math notranslate nohighlight">\( B \)</span> is of dimension <span class="math notranslate nohighlight">\( M \)</span>.</p>
-<div class="toctree-wrapper compound">
 </div>
+<div class="section" id="linear-layers-in-code">
+<h2>Linear layers in code?<a class="headerlink" href="#linear-layers-in-code" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Linear</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span> <span class="o">=</span> <span class="n">Linear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">detach</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linear</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">detach</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.5451, -0.5129,  0.1040],
+        [ 0.3793,  0.5689,  0.5238],
+        [-0.0896, -0.1603,  0.5574],
+        [ 0.4164,  0.1742, -0.0654]])
+tensor([ 0.5269,  0.2634,  0.5498, -0.4896])
+</pre></div>
+</div>
+</div>
+</div>
+<p>You see, linear layers are just 2 matrices, weight and bias.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">])</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">@</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linear</span><span class="o">.</span><span class="n">bias</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y1</span> <span class="o">==</span> <span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([-0.7319,  3.3520,  1.8120,  0.0792], grad_fn=&lt;AddBackward0&gt;)
+tensor([-0.7319,  3.3520,  1.8120,  0.0792], grad_fn=&lt;AddBackward0&gt;)
+tensor([True, True, True, True])
+</pre></div>
+</div>
+</div>
+</div>
+<p>All that a linear layer do is to <code class="docutils literal notranslate"><span class="pre">matmul</span></code> the input vector, then added by the bias. It’s the linear algebra notation of <span class="math notranslate nohighlight">\( WX+B \)</span>, with <span class="math notranslate nohighlight">\( W \)</span> the weight matrix, and <span class="math notranslate nohighlight">\( B \)</span> the bias vector.</p>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
