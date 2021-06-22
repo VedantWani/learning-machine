@@ -53,7 +53,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="AutoEncoder Model" href="ae/ae.html" />
-    <link rel="prev" title="Transformer vs RNN" href="../layers/transformer/transformer-vs-rnn.html" />
+    <link rel="prev" title="Learning Rate" href="../issues/lr/lr.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,17 +90,17 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../basic/basic.html">
+  <a class="reference internal" href="../basics/basics.html">
    Getting Started
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../basic/approx/approx.html">
+  <a class="reference internal" href="../basics/approx/approx.html">
    Approximation models
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../basic/gradients/gradients.html">
+  <a class="reference internal" href="../basics/gradients/gradients.html">
    Gradients
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -110,12 +110,12 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../basic/gradients/loss-fn-derivative.html">
+    <a class="reference internal" href="../basics/gradients/loss-fn-derivative.html">
      Do loss functions have to be differentiable?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../basic/gradients/torch-cal-grads.html">
+    <a class="reference internal" href="../basics/gradients/torch-cal-grads.html">
      How are gradients calculated in deep learning systems?
     </a>
    </li>
@@ -134,26 +134,14 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../tasks/regression/em-algo.html">
-   Expectation-Maximization Algorithm
+  <a class="reference internal" href="../tasks/regression/regression.html">
+   Regression
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../tasks/classification/classification.html">
    Classification
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tasks/classification/gmm.html">
-     Gaussian Mixture Model
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -171,8 +159,8 @@
   <a class="reference internal" href="../layers/linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,8 +211,8 @@
   <a class="reference internal" href="../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -240,6 +228,43 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../layers/activation/activation.html">
+   Activation Functions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Frequently encountered issues
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../issues/issues.html">
+   Frequently Encoutered Issues
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../issues/batch/batch.html">
+   Batch size
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../issues/gradient/norm.html">
+   Gradient Vanishing / Gradient Explosion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../issues/gradient/saddle.html">
+   Saddle point
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../issues/lr/lr.html">
+   Learning Rate
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -257,8 +282,8 @@
   <a class="reference internal" href="ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,6 +298,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="gan/gan.html">
    Generative Adversarial Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gmm/gmm.html">
+   Gaussian Mixture Model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Improvements to a model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../better/better.html">
+   Improvements to a model
   </a>
  </li>
 </ul>
@@ -359,6 +401,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-generative-models">
+   Why generative models?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-generative-models-generate-things">
+   How do generative models generate things?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -369,6 +429,16 @@
                 
   <div class="section" id="generative-models">
 <h1>Generative Models<a class="headerlink" href="#generative-models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-generative-models">
+<h2>Why generative models?<a class="headerlink" href="#why-generative-models" title="Permalink to this headline">¶</a></h2>
+<p>Humans can think of marvolous things. Look at Mozart’s ability to create music, and Van Gough’s prowess to paint! In machine learning words, we call these people <strong>good generators</strong>. They are able to generate stuff that are so good it’s called art.</p>
+<p>Generative models strive to do the same for computers. It’s very different from the normal classification/regression problem (even though the models still use them under the hood), because in classification/regression, you are reducing the input (an image, a voice command) to something simpler. For classification, it’s a label. For regression, it’s a handful of numbers. While generative models want to create output that are complicated, and real.</p>
+</div>
+<div class="section" id="how-do-generative-models-generate-things">
+<h2>How do generative models generate things?<a class="headerlink" href="#how-do-generative-models-generate-things" title="Permalink to this headline">¶</a></h2>
+<p>Well, since a computer generator can’t live in its ivory tower and generate things because it would look like garbage to use, a few real world data have to be used to tell the machine what are good real world examples.</p>
+<p>In training the generator, we usually use several ways to <em>correct</em> the behavior of the model by providing incentive. For AE/VAE it’s the reconstruction loss. For GAN it’s the discriminator’s loss. You don’t need to know what it means yet, they will be introduced in the following sections, just have to bear in mind that even generative models require real world examples (contrary to common believes).</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -396,7 +466,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../layers/transformer/transformer-vs-rnn.html" title="previous page">Transformer vs RNN</a>
+    <a class='left-prev' id="prev-link" href="../issues/lr/lr.html" title="previous page">Learning Rate</a>
     <a class='right-next' id="next-link" href="ae/ae.html" title="next page">AutoEncoder Model</a>
 
         </div>
