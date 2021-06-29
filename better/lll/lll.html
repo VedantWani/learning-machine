@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Learning Machine</title>
+    <title>Life Long Learning &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <link rel="canonical" href="https://rentruewang.github.io/better/lll/lll.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../compression/compression.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../meta/meta.html" />
+    <link rel="next" title="Model Compression" href="../compression/compression.html" />
+    <link rel="prev" title="Meta Learning" href="../meta/meta.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -116,7 +116,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -311,10 +311,30 @@
   Improvements to a model
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../better.html">
    Improvements to a model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explainable/explainable.html">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../meta/meta.html">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../compression/compression.html">
+   Model Compression
   </a>
  </li>
 </ul>
@@ -396,6 +416,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/better/lll/lll.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -405,7 +442,17 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-lll">
+   Why LLL?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-lll-works">
+   How LLL works?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -417,7 +464,22 @@
         
               <div>
                 
-  
+  <div class="section" id="life-long-learning">
+<h1>Life Long Learning<a class="headerlink" href="#life-long-learning" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>L</strong>ife <strong>L</strong>ong <strong>L</strong>earning are also called LLL.</p>
+</div>
+<div class="section" id="why-lll">
+<h2>Why LLL?<a class="headerlink" href="#why-lll" title="Permalink to this headline">¶</a></h2>
+<p>Humans can learn and memorize things. When we learn about new things, we don’t really forget how to do it. A person can probably swim after years of staying out of a swimming pool, or ride a bicycle despite not having ridden on one in decades. However, machine learning models don’t seem to be able to do that. When performing updates to a model, the model’s ability to perform on the previous tasks are simply destroyed. That’s the reason for the existence of LLL, to help machine retain memory over its lifetime.</p>
+</div>
+<div class="section" id="how-lll-works">
+<h2>How LLL works?<a class="headerlink" href="#how-lll-works" title="Permalink to this headline">¶</a></h2>
+<p>There are multiple ways to perform LLL.</p>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -443,8 +505,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../meta/meta.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="../compression/compression.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="../meta/meta.html" title="previous page">Meta Learning</a>
+    <a class='right-next' id="next-link" href="../compression/compression.html" title="next page">Model Compression</a>
 
         </div>
         

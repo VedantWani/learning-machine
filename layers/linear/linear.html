@@ -118,7 +118,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -319,6 +319,26 @@
    Improvements to a model
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/explainable/explainable.html">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/meta/meta.html">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/lll/lll.html">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/compression/compression.html">
+   Model Compression
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -498,11 +518,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.3269, -0.0085, -0.3727],
-        [ 0.1727, -0.1996,  0.0957],
-        [ 0.2614, -0.3105, -0.0459],
-        [-0.2353, -0.3369, -0.2198]])
-tensor([-0.3283, -0.0796, -0.5418, -0.0987])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.3595,  0.5444, -0.1026],
+        [ 0.0956, -0.3053,  0.1650],
+        [-0.0395, -0.4737, -0.4495],
+        [-0.2352,  0.5023,  0.5346]])
+tensor([-0.2347,  0.2535, -0.3218,  0.4978])
 </pre></div>
 </div>
 </div>
@@ -520,8 +540,8 @@ tensor([-0.3283, -0.0796, -0.5418, -0.0987])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([-1.7904, -0.0191, -1.0391, -1.6671], grad_fn=&lt;AddBackward0&gt;)
-tensor([-1.7904, -0.0191, -1.0391, -1.6671], grad_fn=&lt;AddBackward0&gt;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([ 0.9058,  0.2334, -2.6571,  2.8709], grad_fn=&lt;AddBackward0&gt;)
+tensor([ 0.9058,  0.2334, -2.6571,  2.8709], grad_fn=&lt;AddBackward0&gt;)
 tensor([True, True, True, True])
 </pre></div>
 </div>

@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/better/better.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="explainable/explainable.html" />
+    <link rel="next" title="Explainable AI" href="explainable/explainable.html" />
     <link rel="prev" title="Gaussian Mixture Model" href="../generative/gmm/gmm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,7 +116,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../basics/gradients/torch-cal-grads.html">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -317,6 +317,26 @@
    Improvements to a model
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="explainable/explainable.html">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="meta/meta.html">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lll/lll.html">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="compression/compression.html">
+   Model Compression
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -396,11 +416,71 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/better/better.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#areas-to-improve">
+   Areas to improve
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-learning">
+     <span class="xref myst">
+      Meta learning
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-compression">
+     <span class="xref myst">
+      Model compression
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#life-long-learning">
+     <span class="xref myst">
+      Life long learning
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explainable-ai">
+     <span class="xref myst">
+      Explainable AI
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -411,6 +491,27 @@
                 
   <div class="section" id="improvements-to-a-model">
 <h1>Improvements to a model<a class="headerlink" href="#improvements-to-a-model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="areas-to-improve">
+<h2>Areas to improve<a class="headerlink" href="#areas-to-improve" title="Permalink to this headline">¶</a></h2>
+<p>Now we know how to train a model. However, machine learning is so much more than training. How to train super fast on unseen data? How to make the model trained extremely small to fit in mobile devices? How to make a model perform well on multiple different domains? And how to explain how your model makes prediction?</p>
+<p>In this section we will walk over these questions and show you that, yes, we can make the model even better!</p>
+<div class="section" id="meta-learning">
+<h3><a class="reference internal" href="meta/meta.html"><span class="doc std std-doc">Meta learning</span></a><a class="headerlink" href="#meta-learning" title="Permalink to this headline">¶</a></h3>
+<p>It doesn’t get any easier, you just have to get faster.</p>
+</div>
+<div class="section" id="model-compression">
+<h3><a class="reference internal" href="compression/compression.html"><span class="doc std std-doc">Model compression</span></a><a class="headerlink" href="#model-compression" title="Permalink to this headline">¶</a></h3>
+<p>It’s not about being small, it’s about doing more with less.</p>
+</div>
+<div class="section" id="life-long-learning">
+<h3><a class="reference internal" href="lll/lll.html"><span class="doc std std-doc">Life long learning</span></a><a class="headerlink" href="#life-long-learning" title="Permalink to this headline">¶</a></h3>
+<p>Wisdom is not a product of school but of the life long attempt to acquire it.</p>
+</div>
+<div class="section" id="explainable-ai">
+<h3><a class="reference internal" href="explainable/explainable.html"><span class="doc std std-doc">Explainable AI</span></a><a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes being understanding is more important than being right…</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -439,7 +540,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../generative/gmm/gmm.html" title="previous page">Gaussian Mixture Model</a>
-    <a class='right-next' id="next-link" href="explainable/explainable.html" title="next page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="explainable/explainable.html" title="next page">Explainable AI</a>
 
         </div>
         

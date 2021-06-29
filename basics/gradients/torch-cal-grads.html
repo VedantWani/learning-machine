@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How are gradients calculated in deep learning systems? &#8212; Learning Machine</title>
+    <title>How Gradients Are Calculated? &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/basics/gradients/torch-cal-grads.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -116,7 +118,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -317,6 +319,26 @@
    Improvements to a model
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/explainable/explainable.html">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/meta/meta.html">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/lll/lll.html">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../better/compression/compression.html">
+   Model Compression
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -396,11 +418,51 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/basics/gradients/torch-cal-grads.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chain-rule">
+   Chain rule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-usage-of-chain-rule">
+   Example usage of chain rule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-how-does-pytorch-calculate-gradients">
+   So how does PyTorch calculate gradients?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -409,8 +471,8 @@
         
               <div>
                 
-  <div class="section" id="how-are-gradients-calculated-in-deep-learning-systems">
-<h1>How are gradients calculated in deep learning systems?<a class="headerlink" href="#how-are-gradients-calculated-in-deep-learning-systems" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="how-gradients-are-calculated">
+<h1>How Gradients Are Calculated?<a class="headerlink" href="#how-gradients-are-calculated" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This part may be more mathematics focused. If you simply want to grasp the intuition behind deep learning, feel free to skip the section.</p>
@@ -418,6 +480,45 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This explanation will focus on how PyTorch calculates gradients. Recently TensorFlow has switched to the same model so the method seems pretty good.</p>
+</div>
+<div class="section" id="chain-rule">
+<h2>Chain rule<a class="headerlink" href="#chain-rule" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f}{d x} = \frac{d f}{d y} \frac{d y}{d x}
+\]</div>
+<p>Chain rule is basically a way to calculate derivatives for functions that are very composed and complicated. With chain rule at hand, we will be able to take derivatives for functions that look familiar but complicated.</p>
+</div>
+<div class="section" id="example-usage-of-chain-rule">
+<h2>Example usage of chain rule<a class="headerlink" href="#example-usage-of-chain-rule" title="Permalink to this headline">¶</a></h2>
+<p>It’s very easy to calculate the derivative of <span class="math notranslate nohighlight">\( 5 x \)</span>, which is <span class="math notranslate nohighlight">\( 5 \)</span>. It’s also obvious that the derivative of <span class="math notranslate nohighlight">\( x^3 \)</span> is <span class="math notranslate nohighlight">\( 3 x^2 \)</span>. However, what’s the gradient of <span class="math notranslate nohighlight">\( (5 x)^3 \)</span>?</p>
+<p>It’s easy, you say. <span class="math notranslate nohighlight">\( (5 x)^3 = 125 x^3 \)</span>, so the derivative is <span class="math notranslate nohighlight">\( 125 (3 x^2) = 375 x^2 \)</span>. You’re right. For demonstration purpose, let’s see how chain rule can derive the same answer.</p>
+<p>First, let <span class="math notranslate nohighlight">\( y = 5 x \)</span>. Then, the chain rule:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f}{d x} = \frac{d f}{d y} \frac{d y}{d x}
+\]</div>
+<p>will reduce to:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d (5 x)^3}{d x} = \frac{d (5 x)^3}{d (5 x)} \frac{d (5 x)}{d x}
+\]</div>
+<p>We know that <span class="math notranslate nohighlight">\( \frac{d x^3}{x} = 3 x^2 \)</span>.</p>
+<p>So that:
+$<span class="math notranslate nohighlight">\(
+\frac{d (5 x)^3}{d (5 x)} \frac{d (5 x)}{d x} = 3 (5 x)^2 5 = 375 x^2
+\)</span>$</p>
+<p>The same answer. So why chain rule? Imagine if it’s not <span class="math notranslate nohighlight">\( (5 x)^3 \)</span>, but <span class="math notranslate nohighlight">\( \cos(\sin (5 x) 8 x) \)</span>? This is where chain rule comes in handy. It can decompose the complicated step by step an arrive at the solution that may be otherwise too complicated. I’m not going to derive the derivatives of <span class="math notranslate nohighlight">\( \cos(\sin (5 x) 8 x) \)</span>. Try it yourself!</p>
+</div>
+<div class="section" id="so-how-does-pytorch-calculate-gradients">
+<h2>So how does PyTorch calculate gradients?<a class="headerlink" href="#so-how-does-pytorch-calculate-gradients" title="Permalink to this headline">¶</a></h2>
+<p>Gradients are multi-dimensional derivatives. A gradient for a list of parameter <span class="math notranslate nohighlight">\( X \)</span> with regards to the number <span class="math notranslate nohighlight">\( y \)</span> can be defined as:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}
+\begin{bmatrix}
+\frac{d y}{d x_1} \\\end{split}\\\end{bmatrix}
+\end{aligned}\end{align} \]</div>
+<p>Gradients are calculated using chain rule. Turns out that most functions you use, that PyTorch provides, are composed by easy functions, and PyTorch derives the gradients for the</p>
 </div>
 </div>
 

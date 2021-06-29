@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Learning Machine</title>
+    <title>Meta Learning &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <link rel="canonical" href="https://rentruewang.github.io/better/meta/meta.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../lll/lll.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../explainable/explainable.html" />
+    <link rel="next" title="Life Long Learning" href="../lll/lll.html" />
+    <link rel="prev" title="Explainable AI" href="../explainable/explainable.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -116,7 +116,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -311,10 +311,30 @@
   Improvements to a model
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../better.html">
    Improvements to a model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explainable/explainable.html">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lll/lll.html">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../compression/compression.html">
+   Model Compression
   </a>
  </li>
 </ul>
@@ -396,6 +416,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/better/meta/meta.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -405,7 +442,12 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-meta-learning">
+   What’s meta learning?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -417,7 +459,14 @@
         
               <div>
                 
-  
+  <div class="section" id="meta-learning">
+<h1>Meta Learning<a class="headerlink" href="#meta-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-s-meta-learning">
+<h2>What’s meta learning?<a class="headerlink" href="#what-s-meta-learning" title="Permalink to this headline">¶</a></h2>
+<p>Meta means referring to oneself. Meta learning means learning, for learning. Or learning in order to learn better, or so on. Meta learning focuses on help models learn faster on the first run, training faster without needing to worry about bad things. Learning new things fast and efficient — That’s the realm of meta learning.</p>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -443,8 +492,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../explainable/explainable.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="../lll/lll.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="../explainable/explainable.html" title="previous page">Explainable AI</a>
+    <a class='right-next' id="next-link" href="../lll/lll.html" title="next page">Life Long Learning</a>
 
         </div>
         

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Learning Machine</title>
+    <title>Explainable AI &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/better/explainable/explainable.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../meta/meta.html" />
+    <link rel="next" title="Meta Learning" href="../meta/meta.html" />
     <link rel="prev" title="Improvements to a model" href="../better.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,7 +116,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
-     How are gradients calculated in deep learning systems?
+     How Gradients Are Calculated?
     </a>
    </li>
   </ul>
@@ -311,10 +311,30 @@
   Improvements to a model
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../better.html">
    Improvements to a model
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Explainable AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../meta/meta.html">
+   Meta Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lll/lll.html">
+   Life Long Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../compression/compression.html">
+   Model Compression
   </a>
  </li>
 </ul>
@@ -396,6 +416,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/better/explainable/explainable.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -405,7 +442,34 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why">
+   Why?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-approaches-for-explainable-ai-systems">
+   Main approaches for explainable AI systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#just-explain-it">
+     Just explain it
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-a-part-and-see-what-gets-affected">
+     Removing a part, and see what gets affected
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#see-what-parts-of-the-input-yield-the-biggest-gradients">
+     See what parts of the input yield the biggest gradients
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -417,7 +481,31 @@
         
               <div>
                 
-  
+  <div class="section" id="explainable-ai">
+<h1>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why">
+<h2>Why?<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
+<p>Well, we want to know why. Why does a machine think that way. When AlphaGo is placing a stone, what value does it see in that move? When a model says that a fish is a human, what does he see in that fish that makes it a human? Being able to explain how a model works really helps us people understand, and improve on existing systems.</p>
+</div>
+<div class="section" id="main-approaches-for-explainable-ai-systems">
+<h2>Main approaches for explainable AI systems<a class="headerlink" href="#main-approaches-for-explainable-ai-systems" title="Permalink to this headline">¶</a></h2>
+<p>Explainable AI systems tend to</p>
+<div class="section" id="just-explain-it">
+<h3>Just explain it<a class="headerlink" href="#just-explain-it" title="Permalink to this headline">¶</a></h3>
+<p>Models like decision tree is easy to explain, because it’s just making decisions along the way. It’s fairly easy to see what goes wrong along the multiple decisions. Or models like KNN, you know how your model clusters things because it follows an algorithm that you understands.</p>
+<p>Most of the models that are directly explainable are based on some algorithms, as opposed to numeric models (that crunch numbers), which deep learning models are.</p>
+</div>
+<div class="section" id="removing-a-part-and-see-what-gets-affected">
+<h3>Removing a part, and see what gets affected<a class="headerlink" href="#removing-a-part-and-see-what-gets-affected" title="Permalink to this headline">¶</a></h3>
+<p>If a panda does not have his/her head, is he/she still a human? Probably. However, if it is doesn’t have its belly, it probably looks like a zebra. Sometimes when you want to see what part affects the decision of the model the most, you simply remove that part and see if the model changes its mind. In the above case, belly of a panda is much more characteristic of a panda than the head of a panda, because your model relies on it to make the correct decision.</p>
+</div>
+<div class="section" id="see-what-parts-of-the-input-yield-the-biggest-gradients">
+<h3>See what parts of the input yield the biggest gradients<a class="headerlink" href="#see-what-parts-of-the-input-yield-the-biggest-gradients" title="Permalink to this headline">¶</a></h3>
+<p>We love using gradients in deep learning. Gradients of inputs mean the amount of change to the output if input changes in the direction of the gradients. So if the gradients of input is huge in some region, it probably means that that part of the input is very important. This technique is very popular in images, and has a special name: saliency map.</p>
+</div>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -444,7 +532,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../better.html" title="previous page">Improvements to a model</a>
-    <a class='right-next' id="next-link" href="../meta/meta.html" title="next page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="../meta/meta.html" title="next page">Meta Learning</a>
 
         </div>
         
