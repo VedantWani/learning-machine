@@ -416,6 +416,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/generative/generative.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -451,12 +468,12 @@
 <h1>Generative Models<a class="headerlink" href="#generative-models" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="why-generative-models">
 <h2>Why generative models?<a class="headerlink" href="#why-generative-models" title="Permalink to this headline">¶</a></h2>
-<p>Humans can think of marvolous things. Look at Mozart’s ability to create music, and Van Gough’s prowess to paint! In machine learning words, we call these people <strong>good generators</strong>. They are able to generate stuff that are so good it’s called art.</p>
+<p>Humans can think of marvelous things. Look at Mozart’s ability to create music, and Van Gough’s prowess to paint! In machine learning words, we call these people <strong>good generators</strong>. They are able to generate stuff that are so good it’s called art.</p>
 <p>Generative models strive to do the same for computers. It’s very different from the normal classification/regression problem (even though the models still use them under the hood), because in classification/regression, you are reducing the input (an image, a voice command) to something simpler. For classification, it’s a label. For regression, it’s a handful of numbers. While generative models want to create output that are complicated, and real.</p>
 </div>
 <div class="section" id="how-do-generative-models-generate-things">
 <h2>How do generative models generate things?<a class="headerlink" href="#how-do-generative-models-generate-things" title="Permalink to this headline">¶</a></h2>
-<p>Well, since a computer generator can’t live in its ivory tower and generate things because it would look like garbage to use, a few real world data have to be used to tell the machine what are good real world examples.</p>
+<p>A computer can simply generate things because it would look like garbage, a few real world data need to be used to tell the machine what are good real world examples.</p>
 <p>In training the generator, we usually use several ways to <em>correct</em> the behavior of the model by providing incentive. For AE/VAE it’s the reconstruction loss. For GAN it’s the discriminator’s loss. You don’t need to know what it means yet, they will be introduced in the following sections, just have to bear in mind that even generative models require real world examples (contrary to common believes).</p>
 </div>
 </div>
