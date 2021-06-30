@@ -54,7 +54,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/layers/activation/activation.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Frequently Encoutered Issues" href="../../issues/issues.html" />
+    <link rel="next" title="Rectified Linear Unit" href="relu/relu.html" />
     <link rel="prev" title="Transformer vs RNN" href="../transformer/transformer-vs-rnn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -85,7 +85,14 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Getting started
  </span>
@@ -225,16 +232,48 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../transformer/attn/self-attn.html">
+     Self Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../transformer/transformer-vs-rnn.html">
      Transformer vs RNN
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Activation Functions
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="relu/relu.html">
+     Rectified Linear Unit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sigmoid/sigmoid.html">
+     Sigmoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="softmax/softmax.html">
+     Softmax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tanh/tanh.html">
+     Hyperbolic Tangent
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -284,8 +323,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -337,6 +376,60 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../better/compression/compression.html">
    Model Compression
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using existing models to improve models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/reuse.html">
+   Reusing Existing Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/da/da.html">
+   Domain Adaptation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/transfer/transfer.html">
+   Transfer Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/distil/distil.html">
+   Knowledge Distilation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unsupervised training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/unsupervised.html">
+   Unsupervised Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/decisiontree/decisiontree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/selfsupervised/selfsupervised.html">
+   Self Supervised Learning
   </a>
  </li>
 </ul>
@@ -485,6 +578,8 @@
 <p>Truly, becaue of how every neural network can be thought of as a chain of matrix multiplications, simply adding more linear layers are never going to help expand the type of functions that we want to approximate, because with only linear functions, we can only approximate linear functions! That’s without activation function.</p>
 <p>If we apply activation <span class="math notranslate nohighlight">\( \sigma \)</span> to the network: <span class="math notranslate nohighlight">\( F(X) = \sigma (((B) \sigma (A) ) x \)</span>, then we can’t decompose the function easily. In fact, with enough layers, the function would be so complicated that it can approximate any function! And that’s all because of the power of activation functions.</p>
 </div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -513,7 +608,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../transformer/transformer-vs-rnn.html" title="previous page">Transformer vs RNN</a>
-    <a class='right-next' id="next-link" href="../../issues/issues.html" title="next page">Frequently Encoutered Issues</a>
+    <a class='right-next' id="next-link" href="relu/relu.html" title="next page">Rectified Linear Unit</a>
 
         </div>
         

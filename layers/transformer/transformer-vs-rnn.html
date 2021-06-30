@@ -53,7 +53,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Activation Functions" href="../activation/activation.html" />
-    <link rel="prev" title="Attention" href="attn/attn.html" />
+    <link rel="prev" title="Self Attention" href="attn/self-attn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -83,7 +83,14 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Getting started
  </span>
@@ -222,6 +229,11 @@
      Attention
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="attn/self-attn.html">
+     Self Attention
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Transformer vs RNN
@@ -229,10 +241,37 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../activation/activation.html">
    Activation Functions
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/relu/relu.html">
+     Rectified Linear Unit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/sigmoid/sigmoid.html">
+     Sigmoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/softmax/softmax.html">
+     Softmax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/tanh/tanh.html">
+     Hyperbolic Tangent
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -282,8 +321,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -335,6 +374,60 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../better/compression/compression.html">
    Model Compression
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using existing models to improve models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/reuse.html">
+   Reusing Existing Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/da/da.html">
+   Domain Adaptation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/transfer/transfer.html">
+   Transfer Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/distil/distil.html">
+   Knowledge Distilation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unsupervised training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/unsupervised.html">
+   Unsupervised Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/decisiontree/decisiontree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/selfsupervised/selfsupervised.html">
+   Self Supervised Learning
   </a>
  </li>
 </ul>
@@ -416,11 +509,51 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/layers/transformer/transformer-vs-rnn.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-rnns-good">
+   Why are RNNs good?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-rnns-not-good-enough">
+   Why are RNNs not good enough?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-transformers-all-the-rage">
+   Why are transformers all the rage?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -431,6 +564,20 @@
                 
   <div class="section" id="transformer-vs-rnn">
 <h1>Transformer vs RNN<a class="headerlink" href="#transformer-vs-rnn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-are-rnns-good">
+<h2>Why are RNNs good?<a class="headerlink" href="#why-are-rnns-good" title="Permalink to this headline">¶</a></h2>
+<p>For many years RNNs are the undisputed champion in sequence processing. Sequences include texts, voice data, and all time-related data. The reason RNNs are so good is that it sees through all past things (or events), decides what’s important to keep, then makes the next prediction. RNN works like a human mind does, seeing through past things to predict the future.</p>
+</div>
+<div class="section" id="why-are-rnns-not-good-enough">
+<h2>Why are RNNs not good enough?<a class="headerlink" href="#why-are-rnns-not-good-enough" title="Permalink to this headline">¶</a></h2>
+<p>All kinds of RNNs suffer from gradient explosion/vanishing. That means it’s very difficult to train large scale RNN, process over long sequences, or just continuously improve upon the result because bigger RNNs are not necessarily better.</p>
+<p>Also, because RNNs have to be trained on the sequence tokens in a one-by-one fashion, it’s difficult to parallelize that and make it faster.</p>
+</div>
+<div class="section" id="why-are-transformers-all-the-rage">
+<h2>Why are transformers all the rage?<a class="headerlink" href="#why-are-transformers-all-the-rage" title="Permalink to this headline">¶</a></h2>
+<p>Transformers are not RNNs. That mean, it doesn’t suffer from all those weaknesses of RNNs like training slowly or unable to scale up. However, that’s not the reason transformers have all the attention (pun intended) right now.</p>
+<p>The reason transformers are so popular started with Bert, a massive pretrained transformer based model that you can easily use for other tasks. Being pretrained means that you don’t need to train it yourself, you can simply use the model as a preprocessor, a feature extractor, and train a much smaller model for your task. And Bert is the first wildly successful language processing model to do that.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -458,7 +605,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="attn/attn.html" title="previous page">Attention</a>
+    <a class='left-prev' id="prev-link" href="attn/self-attn.html" title="previous page">Self Attention</a>
     <a class='right-next' id="next-link" href="../activation/activation.html" title="next page">Activation Functions</a>
 
         </div>

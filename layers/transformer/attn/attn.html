@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/layers/transformer/attn/attn.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Transformer vs RNN" href="../transformer-vs-rnn.html" />
+    <link rel="next" title="Self Attention" href="self-attn.html" />
     <link rel="prev" title="Transformer Block" href="../transformer.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -83,7 +83,14 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Getting started
  </span>
@@ -223,16 +230,48 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="self-attn.html">
+     Self Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../transformer-vs-rnn.html">
      Transformer vs RNN
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../activation/activation.html">
    Activation Functions
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../activation/relu/relu.html">
+     Rectified Linear Unit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../activation/sigmoid/sigmoid.html">
+     Sigmoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../activation/softmax/softmax.html">
+     Softmax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../activation/tanh/tanh.html">
+     Hyperbolic Tangent
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -282,8 +321,8 @@
   <a class="reference internal" href="../../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -335,6 +374,60 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../better/compression/compression.html">
    Model Compression
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using existing models to improve models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reuse/reuse.html">
+   Reusing Existing Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reuse/da/da.html">
+   Domain Adaptation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reuse/transfer/transfer.html">
+   Transfer Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reuse/distil/distil.html">
+   Knowledge Distilation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unsupervised training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../unsupervised/unsupervised.html">
+   Unsupervised Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../unsupervised/decisiontree/decisiontree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../unsupervised/clustering/clustering.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../unsupervised/selfsupervised/selfsupervised.html">
+   Self Supervised Learning
   </a>
  </li>
 </ul>
@@ -416,11 +509,51 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/layers/transformer/attn/attn.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-attention">
+   Why attention?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-attention">
+   What’s attention?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-attention-in-code">
+   Try attention in code
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -431,6 +564,83 @@
                 
   <div class="section" id="attention">
 <h1>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-attention">
+<h2>Why attention?<a class="headerlink" href="#why-attention" title="Permalink to this headline">¶</a></h2>
+<p>Attention means keeping tabs on the most important parts. Attention comes from a key observation: Not all words are equal, and some words are more crucial to understanding the sentence than other. For example, the sentence “It is raining outside”. You probably understand that it’s raining outside if I say: “Rain! Out!”. In this case, <em>it</em> and <em>is</em> are completely redundant. And if a model is trying to understand the sentence, throwing out <em>it</em> and <em>is</em> is probably not going to make a difference.</p>
+</div>
+<div class="section" id="what-s-attention">
+<h2>What’s attention?<a class="headerlink" href="#what-s-attention" title="Permalink to this headline">¶</a></h2>
+<p>So how to focus only on the most important part? One way to do it is to multiply the important parts by a large factor, while reducing the unimportant parts values (those parts are, in fact, numbers in machine’s language). And that’s what attention mechanism does.</p>
+</div>
+<div class="section" id="try-attention-in-code">
+<h2>Try attention in code<a class="headerlink" href="#try-attention-in-code" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span>
+
+    <span class="c1"># sums over the last axis</span>
+    <span class="n">sum_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">exp</span> <span class="o">/</span> <span class="n">sum_exp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">weights</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6.65481039e-02 9.32119413e-01 4.24897140e-04 8.99117459e-04
+ 8.46816780e-06]
+[-0.51559941 -0.08389676 -0.53722913  0.20713905 -1.03880445]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span>
+<span class="n">attn_applied</span> <span class="o">=</span> <span class="n">weights</span> <span class="o">@</span> <span class="n">data</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">average</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">attn_applied</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">argmax</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">weights</span><span class="o">.</span><span class="n">argmax</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.39367814099686954
+-0.11256477972647314
+1
+-0.08389675581257121
+</pre></div>
+</div>
+</div>
+</div>
+<p>See how the attention mask makes the weighted average of data closer to the desired place.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -459,7 +669,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../transformer.html" title="previous page">Transformer Block</a>
-    <a class='right-next' id="next-link" href="../transformer-vs-rnn.html" title="next page">Transformer vs RNN</a>
+    <a class='right-next' id="next-link" href="self-attn.html" title="next page">Self Attention</a>
 
         </div>
         

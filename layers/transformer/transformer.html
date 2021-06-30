@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/layers/transformer/transformer.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -83,7 +85,14 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Getting started
  </span>
@@ -223,16 +232,48 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="attn/self-attn.html">
+     Self Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="transformer-vs-rnn.html">
      Transformer vs RNN
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../activation/activation.html">
    Activation Functions
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/relu/relu.html">
+     Rectified Linear Unit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/sigmoid/sigmoid.html">
+     Sigmoid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/softmax/softmax.html">
+     Softmax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../activation/tanh/tanh.html">
+     Hyperbolic Tangent
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -282,8 +323,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -335,6 +376,60 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../better/compression/compression.html">
    Model Compression
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using existing models to improve models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/reuse.html">
+   Reusing Existing Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/da/da.html">
+   Domain Adaptation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/transfer/transfer.html">
+   Transfer Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reuse/distil/distil.html">
+   Knowledge Distilation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unsupervised training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/unsupervised.html">
+   Unsupervised Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/decisiontree/decisiontree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/selfsupervised/selfsupervised.html">
+   Self Supervised Learning
   </a>
  </li>
 </ul>
@@ -416,11 +511,56 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/layers/transformer/transformer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attention-is-all-you-need">
+   Attention is all you need
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-the-transformer-work">
+   How does the transformer work?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformer-encoder">
+   Transformer encoder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformer-decoder">
+   Transformer decoder
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -431,6 +571,34 @@
                 
   <div class="section" id="transformer-block">
 <h1>Transformer Block<a class="headerlink" href="#transformer-block" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="attention-is-all-you-need">
+<h2>Attention is all you need<a class="headerlink" href="#attention-is-all-you-need" title="Permalink to this headline">¶</a></h2>
+<p>The transformer model comes out of the paper <em>attention is all you need</em>. The paper shows how powerful pure attention mechanisms can be. They introduced a new kind of attention mechanism called self-attention, which we’ll discuss later.</p>
+<p>The significance about self-attention is that with only attention mechanism, the model achieves state-of-the-art performance on many datasets, in a field previously dominated by RNNs.</p>
+</div>
+<div class="section" id="how-does-the-transformer-work">
+<h2>How does the transformer work?<a class="headerlink" href="#how-does-the-transformer-work" title="Permalink to this headline">¶</a></h2>
+<p>The transformer architecture is based on a Seq2Seq model. Traditionally, a seq2seq model is basically an encoder and a decoder, like auto-encoders, but both encoder and decoder are RNNs. The encoder first process through the input, then feeds the encoder’s RNN state or output to the decoder to decode the full sentence. The idea is that the encoder should be able to encode the input into some kind of representation that contains the meaning of the sentence, and the decoder should be able to understand that representation.</p>
+<p>In the case of transformers, because it’s not an RNN, so instead of RNN state, the attention produced by the encoder is used and sent to the decoder. Decoder uses that global information to produce the output.</p>
+</div>
+<div class="section" id="transformer-encoder">
+<h2>Transformer encoder<a class="headerlink" href="#transformer-encoder" title="Permalink to this headline">¶</a></h2>
+<p>The encoding component is a stack of smaller encoders. An encoder does the following thing</p>
+<ol class="simple">
+<li><p>Calculate self-attention score for the input <span class="math notranslate nohighlight">\( I \)</span>.</p></li>
+<li><p>Weigh the input by self-attention scores <span class="math notranslate nohighlight">\( S(I) \)</span>.</p></li>
+<li><p>Pass it through an add-and-normalize layer <span class="math notranslate nohighlight">\( O = I + S(I) \)</span>.</p></li>
+<li><p>Feed the processed data through a linear layer <span class="math notranslate nohighlight">\( F = f(O) \)</span>.</p></li>
+<li><p>Perform activation on the linear layer’s output <span class="math notranslate nohighlight">\( F' = \sigma(F) \)</span>.</p></li>
+<li><p>Multiply the mutated output with the output itself <span class="math notranslate nohighlight">\( F'' = F'F \)</span>.</p></li>
+<li><p>Pass it through an add-and-normalize layer <span class="math notranslate nohighlight">\( F'' + O \)</span>.</p></li>
+</ol>
+<p>An add-and-normalize layer performs a residual add, adding the input and the processed input.</p>
+</div>
+<div class="section" id="transformer-decoder">
+<h2>Transformer decoder<a class="headerlink" href="#transformer-decoder" title="Permalink to this headline">¶</a></h2>
+<p>The decoding component look a lot like the encoding component, it’s also a stack of decoders. Decoders are basically encoders, but they take the attention provided by encoders, and perform step <span class="math notranslate nohighlight">\( 3 \)</span> twice, the first time adds it by the decoder generated attention, the second time adds by the encoder generated attention.</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
