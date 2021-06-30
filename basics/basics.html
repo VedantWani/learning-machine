@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Getting Started &#8212; Learning Machine</title>
+    <title>Holy Trinity for Machine Learning &#8212; Learning Machine</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/basics/basics.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Approximation models" href="approx/approx.html" />
+    <link rel="next" title="Data" href="data/data.html" />
     <link rel="prev" title="Introduction" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,10 +96,32 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Getting Started
+   Holy Trinity for Machine Learning
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="model/model.html">
+     Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loss/loss.html">
+     Loss Function
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="approx/approx.html">
@@ -110,8 +132,8 @@
   <a class="reference internal" href="gradients/gradients.html">
    Gradients
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -166,8 +188,8 @@
   <a class="reference internal" href="../layers/linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -218,8 +240,8 @@
   <a class="reference internal" href="../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -239,14 +261,29 @@
      Transformer vs RNN
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layers/transformer/training/training.html">
+     Training Transformers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layers/transformer/training/teacher/teacher.html">
+     Teacher Forcing vs Scheduled Sampling vs Normal Mode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layers/transformer/training/token/token.html">
+     Token
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../layers/activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -321,8 +358,8 @@
   <a class="reference internal" href="../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -537,14 +574,32 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preface">
-   Preface
+  <a class="reference internal nav-link" href="#i-want-to-do-machine-learning-how">
+   I want to do machine learning. How?
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-learn-machine">
-   Why learn machine?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     <span class="xref myst">
+      Data
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model">
+     <span class="xref myst">
+      Model
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loss">
+     <span class="xref myst">
+      Loss
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -557,19 +612,25 @@
         
               <div>
                 
-  <div class="section" id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="preface">
-<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h2>
-<p>In this book, we’re mainly focused on deep learning, which is a branch of machine learning that leverages of a lot of computing power and yield incredible result. Sometimes it’s called artificial intelligence.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>AI (artificial intelligence), ML (machine learning), DL (deep learning). This book use these terms interchangeably. They are not equal terms outside of this book, however, in the subset we cover in this book they can be seen as equal.</p>
+  <div class="section" id="holy-trinity-for-machine-learning">
+<h1>Holy Trinity for Machine Learning<a class="headerlink" href="#holy-trinity-for-machine-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="i-want-to-do-machine-learning-how">
+<h2>I want to do machine learning. How?<a class="headerlink" href="#i-want-to-do-machine-learning-how" title="Permalink to this headline">¶</a></h2>
+<p>Machine learning systems may look very different, but under the hood, every machine learning system are made up of three essential parts. It helps to understand any machine learning systems to decompose those systems into data, model, and loss functions.</p>
+<div class="section" id="data">
+<h3><a class="reference internal" href="data/data.html"><span class="doc std std-doc">Data</span></a><a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<p>We are talking about machine <em>learning</em>. Without data, what’s there to learn?</p>
+</div>
+<div class="section" id="model">
+<h3><a class="reference internal" href="model/model.html"><span class="doc std std-doc">Model</span></a><a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<p>The task of machine learning is to have machines making decisions for us. Without a model to do these, who will make the decision?</p>
+</div>
+<div class="section" id="loss">
+<h3><a class="reference internal" href="loss/loss.html"><span class="doc std std-doc">Loss</span></a><a class="headerlink" href="#loss" title="Permalink to this headline">¶</a></h3>
+<p>We want our model to perform well on a task. Whether it’s playing a game or driving a car. You have some data, and a model to make predictions based on the inputs. You need to measure how good your model is. Without loss functions, you cannot know what a good model is.</p>
 </div>
 </div>
-<div class="section" id="why-learn-machine">
-<h2>Why learn machine?<a class="headerlink" href="#why-learn-machine" title="Permalink to this headline">¶</a></h2>
-<p>There are many reason to learn machine. The most obvious reason is that machine learning is quite powerful and useful, and many systems use it ranging from Google’s search to snapchat filters. Secondly, it’s quite the rage nowadays, so it certainly would help you in landing a prestigious job. Thirdly, in the case where robots take over the world (like Elon Musk feared), having learned machines’ ways of dealing things may be your only path to survival! Jokes aside, learning machine does help to calm your nerves since most of the theories on the Internet about robots are just over the top. And learning machine helps preventing you from being tricked by those deceptive information.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -599,7 +660,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
-    <a class='right-next' id="next-link" href="approx/approx.html" title="next page">Approximation models</a>
+    <a class='right-next' id="next-link" href="data/data.html" title="next page">Data</a>
 
         </div>
         

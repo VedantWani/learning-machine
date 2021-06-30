@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/intro.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="basics/basics.html" />
+    <link rel="next" title="Holy Trinity for Machine Learning" href="basics/basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,10 +95,32 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="basics/basics.html">
-   Getting Started
+   Holy Trinity for Machine Learning
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/data/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/model/model.html">
+     Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/loss/loss.html">
+     Loss Function
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="basics/approx/approx.html">
@@ -109,8 +131,8 @@
   <a class="reference internal" href="basics/gradients/gradients.html">
    Gradients
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -165,8 +187,8 @@
   <a class="reference internal" href="layers/linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -217,8 +239,8 @@
   <a class="reference internal" href="layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -238,14 +260,29 @@
      Transformer vs RNN
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layers/transformer/training/training.html">
+     Training Transformers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layers/transformer/training/teacher/teacher.html">
+     Teacher Forcing vs Scheduled Sampling vs Normal Mode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layers/transformer/training/token/token.html">
+     Token
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="layers/activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -320,8 +357,8 @@
   <a class="reference internal" href="generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -550,6 +587,16 @@
    How to use this book?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#befor-we-start">
+   Befor we start
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-learn-machine">
+   Why learn machine?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -574,6 +621,18 @@
 <div class="section" id="how-to-use-this-book">
 <h2>How to use this book?<a class="headerlink" href="#how-to-use-this-book" title="Permalink to this headline">¶</a></h2>
 <p>Don’t use this book as a reference, use it as a manual instead. We’ll cover all the basics.</p>
+</div>
+<div class="section" id="befor-we-start">
+<h2>Befor we start<a class="headerlink" href="#befor-we-start" title="Permalink to this headline">¶</a></h2>
+<p>In this book, we’re mainly focused on deep learning, which is a branch of machine learning that leverages of a lot of computing power and yield incredible result. Sometimes it’s called artificial intelligence.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AI (artificial intelligence), ML (machine learning), DL (deep learning). This book use these terms interchangeably. They are not equal terms outside of this book, however, in the subset we cover in this book they can be seen as equal.</p>
+</div>
+</div>
+<div class="section" id="why-learn-machine">
+<h2>Why learn machine?<a class="headerlink" href="#why-learn-machine" title="Permalink to this headline">¶</a></h2>
+<p>There are many reason to learn machine. The most obvious reason is that machine learning is quite powerful and useful, and many systems use it ranging from Google’s search to snapchat filters. Secondly, it’s quite the rage nowadays, so it certainly would help you in landing a prestigious job. Thirdly, in the case where robots take over the world (like Elon Musk feared), having learned machines’ ways of dealing things may be your only path to survival! Jokes aside, learning machine does help to calm your nerves since most of the theories on the Internet about robots are just over the top. And learning machine helps preventing you from being tricked by those deceptive information.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -618,7 +677,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="basics/basics.html" title="next page">Getting Started</a>
+    <a class='right-next' id="next-link" href="basics/basics.html" title="next page">Holy Trinity for Machine Learning</a>
 
         </div>
         

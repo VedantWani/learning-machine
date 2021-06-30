@@ -98,10 +98,32 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../basics/basics.html">
-   Getting Started
+   Holy Trinity for Machine Learning
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/data/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/model/model.html">
+     Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/loss/loss.html">
+     Loss Function
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../basics/approx/approx.html">
@@ -112,8 +134,8 @@
   <a class="reference internal" href="../../basics/gradients/gradients.html">
    Gradients
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -168,8 +190,8 @@
   <a class="reference internal" href="../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -220,8 +242,8 @@
   <a class="current reference internal" href="#">
    Transformer Block
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -241,14 +263,29 @@
      Transformer vs RNN
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training/training.html">
+     Training Transformers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training/teacher/teacher.html">
+     Teacher Forcing vs Scheduled Sampling vs Normal Mode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training/token/token.html">
+     Token
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -323,8 +360,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -598,6 +635,7 @@
 <div class="section" id="transformer-decoder">
 <h2>Transformer decoder<a class="headerlink" href="#transformer-decoder" title="Permalink to this headline">¶</a></h2>
 <p>The decoding component look a lot like the encoding component, it’s also a stack of decoders. Decoders are basically encoders, but they take the attention provided by encoders, and perform step <span class="math notranslate nohighlight">\( 3 \)</span> twice, the first time adds it by the decoder generated attention, the second time adds by the encoder generated attention.</p>
+<p>For transformers, the decoder is an auto-regressive model. In inference mode, what it does is no different from any other decoder. It takes in the sequence it previously generated (it uses <bos> it’s the first token being predicted), and predicts a new token. So what is the encoder doing? Turns out it is used for storing attention information. The stored information is then passed to decoders (on different layers) so that decoders know the meaning of the input sentence.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

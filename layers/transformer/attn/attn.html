@@ -96,10 +96,32 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../basics/basics.html">
-   Getting Started
+   Holy Trinity for Machine Learning
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basics/data/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basics/model/model.html">
+     Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basics/loss/loss.html">
+     Loss Function
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../basics/approx/approx.html">
@@ -110,8 +132,8 @@
   <a class="reference internal" href="../../../basics/gradients/gradients.html">
    Gradients
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -166,8 +188,8 @@
   <a class="reference internal" href="../../linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -218,8 +240,8 @@
   <a class="reference internal" href="../transformer.html">
    Transformer Block
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -239,14 +261,29 @@
      Transformer vs RNN
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training/training.html">
+     Training Transformers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training/teacher/teacher.html">
+     Teacher Forcing vs Scheduled Sampling vs Normal Mode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../training/token/token.html">
+     Token
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -321,8 +358,8 @@
   <a class="reference internal" href="../../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -610,9 +647,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6.65481039e-02 9.32119413e-01 4.24897140e-04 8.99117459e-04
- 8.46816780e-06]
-[-0.51559941 -0.08389676 -0.53722913  0.20713905 -1.03880445]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7.29006998e-10 3.16949751e-11 8.53453661e-10 3.41662575e-06
+ 9.99996582e-01]
+[ 0.1828054   0.60154414 -0.0252486   0.30505901  2.42534459]
 </pre></div>
 </div>
 </div>
@@ -631,10 +668,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.39367814099686954
--0.11256477972647314
-1
--0.08389675581257121
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6979009078460118
+2.425337338983595
+4
+2.4253445869899943
 </pre></div>
 </div>
 </div>
