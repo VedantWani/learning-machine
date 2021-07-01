@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clustering &#8212; Learning Machine</title>
+    <title>Decision Tree &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,11 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/unsupervised/clustering/clustering.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/not-supervised/decision-tree/decision-tree.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Self Supervised Learning" href="../selfsupervised/selfsupervised.html" />
-    <link rel="prev" title="Decision Tree" href="../decisiontree/decisiontree.html" />
+    <link rel="next" title="Clustering" href="../clustering/clustering.html" />
+    <link rel="prev" title="Unsupervised Learning" href="../unsupervised.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -276,6 +276,11 @@
      Token
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/transformer/training/no-training/no-training.html">
+     Using Bert without training?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -365,6 +370,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../generative/ae/ae-arch.html">
+     Auto Encoder Architecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../generative/ae/ae-semi.html">
+     Improving Auto Encoders with Semi Supervised Training
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../generative/ae/vae/vae.html">
      Variational AutoEncoder Model
     </a>
@@ -443,27 +458,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unsupervised training
+  Beyond supervised training
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../decisiontree/decisiontree.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Decision Tree
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../selfsupervised/selfsupervised.html">
+  <a class="reference internal" href="../self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
  </li>
@@ -508,7 +528,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/unsupervised/clustering/clustering.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/not-supervised/decision-tree/decision-tree.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -528,10 +548,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Funsupervised/clustering/clustering.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fnot-supervised/decision-tree/decision-tree.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/unsupervised/clustering/clustering.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/not-supervised/decision-tree/decision-tree.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -551,7 +571,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/unsupervised/clustering/clustering.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/not-supervised/decision-tree/decision-tree.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -574,36 +594,14 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-clustering-methods">
-   What are clustering methods?
+  <a class="reference internal nav-link" href="#how-to-make-a-decision">
+   How to make a decision?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clustering-clustering-methods">
-   Clustering clustering methods
+  <a class="reference internal nav-link" href="#how-do-decision-trees-work">
+   How do decision trees work?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#k-means">
-     K-means
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dbscan">
-     DBSCAN
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gmm">
-     GMM
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hierarchy-methods">
-     Hierarchy methods
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -616,38 +614,16 @@
         
               <div>
                 
-  <div class="section" id="clustering">
-<h1>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-are-clustering-methods">
-<h2>What are clustering methods?<a class="headerlink" href="#what-are-clustering-methods" title="Permalink to this headline">¶</a></h2>
-<p>A cluster is a group of things that are close together. Clustering is a very important idea in machine learning in general. Clustering work well with feature vectors, which is a vector of numbers representing features. Because feature vectors that are close to one another is supposed to be related in a deeper way (because of closer features), clustering is very useful in determining whether two data features are in the same group (same cluster).</p>
+  <div class="section" id="decision-tree">
+<h1>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-to-make-a-decision">
+<h2>How to make a decision?<a class="headerlink" href="#how-to-make-a-decision" title="Permalink to this headline">¶</a></h2>
+<p>Naturally, people make decisions based on a set of rules. If the sky looks gloomy, it’s likely going to rain so taking the umbrella would be a nice idea. Decision tree is based on that idea. A good decision tree separate things into several groups, based on some features, and hopefully it could be able to understand each and every data.</p>
 </div>
-<div class="section" id="clustering-clustering-methods">
-<h2>Clustering clustering methods<a class="headerlink" href="#clustering-clustering-methods" title="Permalink to this headline">¶</a></h2>
-<p>Most clustering methods are related to the following clustering methods:</p>
-<div class="section" id="k-means">
-<h3>K-means<a class="headerlink" href="#k-means" title="Permalink to this headline">¶</a></h3>
-<p>K-means is a kind of <strong>partition based methods</strong>, which means that it partition the (feature) space into different regions, and predicts arbitrary points in the (feature) space by locating which partition the point falls into.</p>
-<p>K-means is one of the most popular clustering methods, because of how simple it is. Its algorithm is as follows:</p>
-<ol class="simple">
-<li><p>Select initial center points. These points will act as the center of the classes later.</p></li>
-<li><p>Assign class labels to each point using the rule that a point is assigned the label of the closest center.</p></li>
-<li><p>Shifting the center to be the mean of all the points that have the same class label as the center.</p></li>
-<li><p>Repeat.</p></li>
-</ol>
-</div>
-<div class="section" id="dbscan">
-<h3>DBSCAN<a class="headerlink" href="#dbscan" title="Permalink to this headline">¶</a></h3>
-<p>DBSCAN, abbreviation for <strong>D</strong>ensity-<strong>B</strong>ased <strong>S</strong>patial <strong>C</strong>lustering of <strong>A</strong>pplications with <strong>N</strong>oise, is a <strong>density based method</strong>, which means that it clusters the points based on densities. If there are many points in a certain region, the algorithm simply assumes that they are all of the same base class.</p>
-</div>
-<div class="section" id="gmm">
-<h3>GMM<a class="headerlink" href="#gmm" title="Permalink to this headline">¶</a></h3>
-<p><strong>G</strong>aussian <strong>M</strong>ixure <strong>M</strong>odels, introduced previously, can do more than generating data. The Gaussians can fit existing data, and be used to explain clusters with probabilities. A GMM, composed of several Gaussians, can be used to fit the data, and the end results will be several Gaussians, which act as clusters.</p>
-</div>
-<div class="section" id="hierarchy-methods">
-<h3>Hierarchy methods<a class="headerlink" href="#hierarchy-methods" title="Permalink to this headline">¶</a></h3>
-<p>Treating every point as its independent cluster, we combine multiple points into the same cluster and do that until there is one big cluster left. We can then see the hierarchy of the problem: later grouped clusters are inherently farther away form each other than earlier grouped clusters.</p>
-</div>
+<div class="section" id="how-do-decision-trees-work">
+<h2>How do decision trees work?<a class="headerlink" href="#how-do-decision-trees-work" title="Permalink to this headline">¶</a></h2>
+<p>A good decision should tell you a lot of things. Decision trees are based on that idea. Decision trees assume that each class given to it is distinct, and it should be relatively easy to distinguish between each and every class. That is, it has to differentiate between every two cases, with as few decisions as possible.</p>
+<p>A decision tree works by maximizing the information obtained by a split. You don’t need to know what that means yet, but in simple words, it splits the group as evenly as possible. That way, it can reach every base case fast, and it makes the decision tree more balanced (more even).</p>
 </div>
 </div>
 
@@ -664,7 +640,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./unsupervised/clustering"
+            path: "./not-supervised/decision-tree"
         },
         predefinedOutput: true
     }
@@ -676,8 +652,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../decisiontree/decisiontree.html" title="previous page">Decision Tree</a>
-    <a class='right-next' id="next-link" href="../selfsupervised/selfsupervised.html" title="next page">Self Supervised Learning</a>
+    <a class='left-prev' id="prev-link" href="../unsupervised.html" title="previous page">Unsupervised Learning</a>
+    <a class='right-next' id="next-link" href="../clustering/clustering.html" title="next page">Clustering</a>
 
         </div>
         

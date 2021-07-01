@@ -278,6 +278,11 @@
      Token
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="training/no-training/no-training.html">
+     Using Bert without training?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -367,6 +372,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../generative/ae/ae-arch.html">
+     Auto Encoder Architecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../generative/ae/ae-semi.html">
+     Improving Auto Encoders with Semi Supervised Training
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../generative/ae/vae/vae.html">
      Variational AutoEncoder Model
     </a>
@@ -445,27 +460,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unsupervised training
+  Beyond supervised training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/unsupervised.html">
+  <a class="reference internal" href="../../not-supervised/semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../not-supervised/unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/decisiontree/decisiontree.html">
+  <a class="reference internal" href="../../not-supervised/decision-tree/decision-tree.html">
    Decision Tree
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
+  <a class="reference internal" href="../../not-supervised/clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/selfsupervised/selfsupervised.html">
+  <a class="reference internal" href="../../not-supervised/self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
  </li>
@@ -595,6 +615,11 @@
    Transformer decoder
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#positional-encoding">
+   Positional encoding
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -636,6 +661,12 @@
 <h2>Transformer decoder<a class="headerlink" href="#transformer-decoder" title="Permalink to this headline">¶</a></h2>
 <p>The decoding component look a lot like the encoding component, it’s also a stack of decoders. Decoders are basically encoders, but they take the attention provided by encoders, and perform step <span class="math notranslate nohighlight">\( 3 \)</span> twice, the first time adds it by the decoder generated attention, the second time adds by the encoder generated attention.</p>
 <p>For transformers, the decoder is an auto-regressive model. In inference mode, what it does is no different from any other decoder. It takes in the sequence it previously generated (it uses <bos> it’s the first token being predicted), and predicts a new token. So what is the encoder doing? Turns out it is used for storing attention information. The stored information is then passed to decoders (on different layers) so that decoders know the meaning of the input sentence.</p>
+</div>
+<div class="section" id="positional-encoding">
+<h2>Positional encoding<a class="headerlink" href="#positional-encoding" title="Permalink to this headline">¶</a></h2>
+<p>Words in a sentence have different meanings if they are ordered differently. The sentence <em>Alice ate Bob</em> is very different in meaning to <em>Bob ate Alice</em>. Well, at least for Alice and Bob. For RNNs, that isn’t an issue. Because RNNs run over a sentence sequentially. So it will either see Alice or Bob first, and knows who appears to be eaten. However, transformers have no way of knowing who comes first because of how self-attention mechanism is symmetry to each position.</p>
+<p>That is the reason we need to add information for position to the model. In <em>Attention is all you need</em>, a positional encoding is added to the input. A positional encoding is basically an embedding, with different values for every indices, so that the model knows what a word’s position is when it processes it.</p>
+<p>A very interesting fact is that changing the order of the tokens does not actually change the output of the model (unlike RNNs), as long as the right positional encoding is associated with the right position. That means that after applying (usually by adding) positional encoding to the input word embedding vector, you can shuffle the order of the vector (along the time axis) all you want without affecting the output of the model. Very cool indeed.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

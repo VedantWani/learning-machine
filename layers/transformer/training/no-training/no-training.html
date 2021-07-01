@@ -5,55 +5,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decision Tree &#8212; Learning Machine</title>
+    <title>Using Bert without training? &#8212; Learning Machine</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/unsupervised/decisiontree/decisiontree.html" />
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Clustering" href="../clustering/clustering.html" />
-    <link rel="prev" title="Unsupervised Learning" href="../unsupervised.html" />
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://rentruewang.github.io/layers/transformer/training/no-training/no-training.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Activation Functions" href="../../../activation/activation.html" />
+    <link rel="prev" title="Token" href="../token/token.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -70,22 +70,22 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
       
-      <img src="../../_static/logo.png" class="logo" alt="logo">
+      <img src="../../../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Learning Machine</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
+  <a class="reference internal" href="../../../../intro.html">
    Introduction
   </a>
  </li>
@@ -97,7 +97,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../basics/basics.html">
+  <a class="reference internal" href="../../../../basics/basics.html">
    Holy Trinity for Machine Learning
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -107,29 +107,29 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/data/data.html">
+    <a class="reference internal" href="../../../../basics/data/data.html">
      Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/model/model.html">
+    <a class="reference internal" href="../../../../basics/model/model.html">
      Model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/loss/loss.html">
+    <a class="reference internal" href="../../../../basics/loss/loss.html">
      Loss Function
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../basics/approx/approx.html">
+  <a class="reference internal" href="../../../../basics/approx/approx.html">
    Approximation models
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../basics/gradients/gradients.html">
+  <a class="reference internal" href="../../../../basics/gradients/gradients.html">
    Gradients
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -139,12 +139,12 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/gradients/loss-fn-derivative.html">
+    <a class="reference internal" href="../../../../basics/gradients/loss-fn-derivative.html">
      Do loss functions have to be differentiable?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
+    <a class="reference internal" href="../../../../basics/gradients/torch-cal-grads.html">
      How Gradients Are Calculated?
     </a>
    </li>
@@ -158,17 +158,17 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../tasks/tasks.html">
+  <a class="reference internal" href="../../../../tasks/tasks.html">
    Types of tasks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../tasks/regression/regression.html">
+  <a class="reference internal" href="../../../../tasks/regression/regression.html">
    Regression
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../tasks/classification/classification.html">
+  <a class="reference internal" href="../../../../tasks/classification/classification.html">
    Classification
   </a>
  </li>
@@ -178,14 +178,14 @@
   Common Building Blocks
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/layers.html">
+  <a class="reference internal" href="../../../layers.html">
    Layers
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../layers/linear/linear.html">
+  <a class="reference internal" href="../../../linear/linear.html">
    Linear Layer
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -195,91 +195,96 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/linear/linear-grad.html">
+    <a class="reference internal" href="../../../linear/linear-grad.html">
      Calculate gradients for Linear Layers
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/cnn/cnn.html">
+  <a class="reference internal" href="../../../cnn/cnn.html">
    Convolution Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/rnn/rnn.html">
+  <a class="reference internal" href="../../../rnn/rnn.html">
    Recurrent Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/emb/emb.html">
+  <a class="reference internal" href="../../../emb/emb.html">
    Embedding Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/dropout/dropout.html">
+  <a class="reference internal" href="../../../dropout/dropout.html">
    Dropout Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/norm/norm.html">
+  <a class="reference internal" href="../../../norm/norm.html">
    Normalization Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/padding/padding.html">
+  <a class="reference internal" href="../../../padding/padding.html">
    Padding Layer
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../layers/pooling/pooling.html">
+  <a class="reference internal" href="../../../pooling/pooling.html">
    Pooling Layer
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../layers/transformer/transformer.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/attn/attn.html">
+    <a class="reference internal" href="../../attn/attn.html">
      Attention
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/attn/self-attn.html">
+    <a class="reference internal" href="../../attn/self-attn.html">
      Self Attention
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/transformer-vs-rnn.html">
+    <a class="reference internal" href="../../transformer-vs-rnn.html">
      Transformer vs RNN
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/training/training.html">
+    <a class="reference internal" href="../training.html">
      Training Transformers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/training/teacher/teacher.html">
+    <a class="reference internal" href="../teacher/teacher.html">
      Teacher Forcing vs Scheduled Sampling vs Normal Mode
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/transformer/training/token/token.html">
+    <a class="reference internal" href="../token/token.html">
      Token
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Using Bert without training?
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../layers/activation/activation.html">
+  <a class="reference internal" href="../../../activation/activation.html">
    Activation Functions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -289,22 +294,22 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/activation/relu/relu.html">
+    <a class="reference internal" href="../../../activation/relu/relu.html">
      Rectified Linear Unit
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/activation/sigmoid/sigmoid.html">
+    <a class="reference internal" href="../../../activation/sigmoid/sigmoid.html">
      Sigmoid
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/activation/softmax/softmax.html">
+    <a class="reference internal" href="../../../activation/softmax/softmax.html">
      Softmax
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../layers/activation/tanh/tanh.html">
+    <a class="reference internal" href="../../../activation/tanh/tanh.html">
      Hyperbolic Tangent
     </a>
    </li>
@@ -318,27 +323,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/issues.html">
+  <a class="reference internal" href="../../../../issues/issues.html">
    Frequently Encoutered Issues
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/batch/batch.html">
+  <a class="reference internal" href="../../../../issues/batch/batch.html">
    Batch size
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/gradient/norm.html">
+  <a class="reference internal" href="../../../../issues/gradient/norm.html">
    Gradient Vanishing / Gradient Explosion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/gradient/saddle.html">
+  <a class="reference internal" href="../../../../issues/gradient/saddle.html">
    Saddle point
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/lr/lr.html">
+  <a class="reference internal" href="../../../../issues/lr/lr.html">
    Learning Rate
   </a>
  </li>
@@ -350,12 +355,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../generative/generative.html">
+  <a class="reference internal" href="../../../../generative/generative.html">
    Generative Models
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../generative/ae/ae.html">
+  <a class="reference internal" href="../../../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -365,19 +370,29 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../generative/ae/vae/vae.html">
+    <a class="reference internal" href="../../../../generative/ae/ae-arch.html">
+     Auto Encoder Architecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../../generative/ae/ae-semi.html">
+     Improving Auto Encoders with Semi Supervised Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../../generative/ae/vae/vae.html">
      Variational AutoEncoder Model
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../generative/gan/gan.html">
+  <a class="reference internal" href="../../../../generative/gan/gan.html">
    Generative Adversarial Models
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../generative/gmm/gmm.html">
+  <a class="reference internal" href="../../../../generative/gmm/gmm.html">
    Gaussian Mixture Model
   </a>
  </li>
@@ -389,27 +404,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/better.html">
+  <a class="reference internal" href="../../../../better/better.html">
    Improvements to a model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/explainable/explainable.html">
+  <a class="reference internal" href="../../../../better/explainable/explainable.html">
    Explainable AI
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/meta/meta.html">
+  <a class="reference internal" href="../../../../better/meta/meta.html">
    Meta Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/lll/lll.html">
+  <a class="reference internal" href="../../../../better/lll/lll.html">
    Life Long Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/compression/compression.html">
+  <a class="reference internal" href="../../../../better/compression/compression.html">
    Model Compression
   </a>
  </li>
@@ -421,49 +436,54 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../reuse/reuse.html">
+  <a class="reference internal" href="../../../../reuse/reuse.html">
    Reusing Existing Models
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../reuse/da/da.html">
+  <a class="reference internal" href="../../../../reuse/da/da.html">
    Domain Adaptation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../reuse/transfer/transfer.html">
+  <a class="reference internal" href="../../../../reuse/transfer/transfer.html">
    Transfer Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../reuse/distil/distil.html">
+  <a class="reference internal" href="../../../../reuse/distil/distil.html">
    Knowledge Distilation
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unsupervised training
+  Beyond supervised training
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../unsupervised.html">
+  <a class="reference internal" href="../../../../not-supervised/semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../not-supervised/unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../not-supervised/decision-tree/decision-tree.html">
    Decision Tree
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../clustering/clustering.html">
+  <a class="reference internal" href="../../../../not-supervised/clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../selfsupervised/selfsupervised.html">
+  <a class="reference internal" href="../../../../not-supervised/self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
  </li>
@@ -508,7 +528,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/unsupervised/decisiontree/decisiontree.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../../../_sources/layers/transformer/training/no-training/no-training.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -528,10 +548,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Funsupervised/decisiontree/decisiontree.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Flayers/transformer/training/no-training/no-training.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/unsupervised/decisiontree/decisiontree.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/layers/transformer/training/no-training/no-training.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -551,10 +571,10 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/unsupervised/decisiontree/decisiontree.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/layers/transformer/training/no-training/no-training.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
+                    src="../../../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
@@ -568,24 +588,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-make-a-decision">
-   How to make a decision?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-decision-trees-work">
-   How do decision trees work?
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -594,17 +596,11 @@
         
               <div>
                 
-  <div class="section" id="decision-tree">
-<h1>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-to-make-a-decision">
-<h2>How to make a decision?<a class="headerlink" href="#how-to-make-a-decision" title="Permalink to this headline">¶</a></h2>
-<p>Naturally, people make decisions based on a set of rules. If the sky looks gloomy, it’s likely going to rain so taking the umbrella would be a nice idea. Decision tree is based on that idea. A good decision tree separate things into several groups, based on some features, and hopefully it could be able to understand each and every data.</p>
-</div>
-<div class="section" id="how-do-decision-trees-work">
-<h2>How do decision trees work?<a class="headerlink" href="#how-do-decision-trees-work" title="Permalink to this headline">¶</a></h2>
-<p>A good decision should tell you a lot of things. Decision trees are based on that idea. Decision trees assume that each class given to it is distinct, and it should be relatively easy to distinguish between each and every class. That is, it has to differentiate between every two cases, with as few decisions as possible.</p>
-<p>A decision tree works by maximizing the information obtained by a split. You don’t need to know what that means yet, but in simple words, it splits the group as evenly as possible. That way, it can reach every base case fast, and it makes the decision tree more balanced (more even).</p>
-</div>
+  <div class="section" id="using-bert-without-training">
+<h1>Using Bert without training?<a class="headerlink" href="#using-bert-without-training" title="Permalink to this headline">¶</a></h1>
+<p>It is possible. In fact, Facebook AI Research (FAIR) published papers on using it completely un-trained, randomly initialized, proving that the structure of transformer itself is enough to extract information (to some extent).</p>
+<p>However, the appeal of Bert is its readily available pretrained models, and using it without training it first (or train it yourself) kind of defeats the purpose.</p>
+<p>Bert is essentially a building block for your model, the idea behind Bert is that essentially, you can add very few layers (one linear layer achieved 85% in spam classification), and get a very good model, without training a lot. So, except the case when you are FAIR (Facebook AI Research), which released several papers about feature-extraction of completely untrained model, you would want to use a pre-trained version of Bert.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -620,7 +616,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./unsupervised/decisiontree"
+            path: "./layers/transformer/training/no-training"
         },
         predefinedOutput: true
     }
@@ -632,8 +628,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../unsupervised.html" title="previous page">Unsupervised Learning</a>
-    <a class='right-next' id="next-link" href="../clustering/clustering.html" title="next page">Clustering</a>
+    <a class='left-prev' id="prev-link" href="../token/token.html" title="previous page">Token</a>
+    <a class='right-next' id="next-link" href="../../../activation/activation.html" title="next page">Activation Functions</a>
 
         </div>
         
@@ -655,7 +651,7 @@
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
   </body>

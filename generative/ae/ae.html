@@ -52,7 +52,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/generative/ae/ae.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Variational AutoEncoder Model" href="vae/vae.html" />
+    <link rel="next" title="Auto Encoder Architecture" href="ae-arch.html" />
     <link rel="prev" title="Generative Models" href="../generative.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -276,6 +276,11 @@
      Token
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/transformer/training/no-training/no-training.html">
+     Using Bert without training?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -365,6 +370,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="ae-arch.html">
+     Auto Encoder Architecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ae-semi.html">
+     Improving Auto Encoders with Semi Supervised Training
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="vae/vae.html">
      Variational AutoEncoder Model
     </a>
@@ -443,27 +458,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unsupervised training
+  Beyond supervised training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/unsupervised.html">
+  <a class="reference internal" href="../../not-supervised/semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../not-supervised/unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/decisiontree/decisiontree.html">
+  <a class="reference internal" href="../../not-supervised/decision-tree/decision-tree.html">
    Decision Tree
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
+  <a class="reference internal" href="../../not-supervised/clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../unsupervised/selfsupervised/selfsupervised.html">
+  <a class="reference internal" href="../../not-supervised/self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
  </li>
@@ -609,7 +629,7 @@
 </div>
 <div class="section" id="how-autoencoders-do-this">
 <h2>How autoencoders do this?<a class="headerlink" href="#how-autoencoders-do-this" title="Permalink to this headline">¶</a></h2>
-<p>Autoencoders do this by first reduce the size of the input array with layers after layers of processing, and then increase the size of the array also by multiple layers, until the size of the array is the same as the input. The array is then compared to the original input. If the difference is small, then congratulations, you have a good model (because it is able to preserve information). In this case, we take the smallest array along the processing path and say that the array is the most compressed (think in data flowing through the model). We separate the model into two parts, the part that processes the input into the compressed input is called <strong>encoder</strong>, and the part decompressing the compressed input is called <strong>decoder</strong>.</p>
+<p>Autoencoders do this by first reduce the size of the input array with layers after layers of processing, and then increase the size of the array also by multiple layers, until the size of the array is the same as the input. The array is then compared to the original input. If the difference is small, then congratulations, you have a good model (because it is able to preserve information). In this case, we take the smallest array along the processing path and say that the array is the most compressed (think in data flowing through the model). We call the compressed vector a <strong>latent representation</strong>. We separate the model into two parts, the part that processes the input into the compressed input is called <strong>encoder</strong>, and the part decompressing the compressed input is called <strong>decoder</strong>.</p>
 </div>
 <div class="section" id="why-are-autoencoders-generative-models">
 <h2>Why are autoencoders generative models?<a class="headerlink" href="#why-are-autoencoders-generative-models" title="Permalink to this headline">¶</a></h2>
@@ -646,7 +666,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../generative.html" title="previous page">Generative Models</a>
-    <a class='right-next' id="next-link" href="vae/vae.html" title="next page">Variational AutoEncoder Model</a>
+    <a class='right-next' id="next-link" href="ae-arch.html" title="next page">Auto Encoder Architecture</a>
 
         </div>
         
