@@ -349,6 +349,16 @@
    Learning Rate
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../issues/data/overfit.html">
+   Overfit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../issues/data/underfit.html">
+   Underfit
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -664,10 +674,14 @@ $<span class="math notranslate nohighlight">\(
 <h2>So how does PyTorch calculate gradients?<a class="headerlink" href="#so-how-does-pytorch-calculate-gradients" title="Permalink to this headline">¶</a></h2>
 <p>Gradients are multi-dimensional derivatives. A gradient for a list of parameter <span class="math notranslate nohighlight">\( X \)</span> with regards to the number <span class="math notranslate nohighlight">\( y \)</span> can be defined as:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}
+\[\begin{split}
 \begin{bmatrix}
-\frac{d y}{d x_1} \\\end{split}\\\end{bmatrix}
-\end{aligned}\end{align} \]</div>
+\frac{d y}{d x_1} \\
+\frac{d y}{d x_2} \\
+\vdots \\
+\frac{d y}{d x_n}
+\end{bmatrix}
+\end{split}\]</div>
 <p>Gradients are calculated using chain rule. Turns out that most functions you use, that PyTorch provides, are composed by easy functions, and PyTorch derives the gradients for the</p>
 </div>
 </div>

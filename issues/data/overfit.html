@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regression &#8212; Learning Machine</title>
+    <title>Overfit &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,13 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <link rel="canonical" href="https://rentruewang.github.io/tasks/regression/regression.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/issues/data/overfit.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classification" href="../classification/classification.html" />
-    <link rel="prev" title="Types of tasks" href="../tasks.html" />
+    <link rel="next" title="Underfit" href="underfit.html" />
+    <link rel="prev" title="Learning Rate" href="../lr/lr.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -158,19 +156,19 @@
   Common Tasks
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../tasks.html">
+  <a class="reference internal" href="../../tasks/tasks.html">
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tasks/regression/regression.html">
    Regression
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../classification/classification.html">
+  <a class="reference internal" href="../../tasks/classification/classification.html">
    Classification
   </a>
  </li>
@@ -323,39 +321,39 @@
   Frequently encountered issues
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/issues.html">
+  <a class="reference internal" href="../issues.html">
    Frequently Encoutered Issues
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/batch/batch.html">
+  <a class="reference internal" href="../batch/batch.html">
    Batch size
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/gradient/norm.html">
+  <a class="reference internal" href="../gradient/norm.html">
    Gradient Vanishing / Gradient Explosion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/gradient/saddle.html">
+  <a class="reference internal" href="../gradient/saddle.html">
    Saddle point
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/lr/lr.html">
+  <a class="reference internal" href="../lr/lr.html">
    Learning Rate
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/data/overfit.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Overfit
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../issues/data/underfit.html">
+  <a class="reference internal" href="underfit.html">
    Underfit
   </a>
  </li>
@@ -540,7 +538,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/tasks/regression/regression.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/issues/data/overfit.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -560,10 +558,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Ftasks/regression/regression.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fissues/data/overfit.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/tasks/regression/regression.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/issues/data/overfit.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -578,6 +576,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/issues/data/overfit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -589,14 +604,43 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-regression">
-   Why regression?
+  <a class="reference internal nav-link" href="#what-happens-when-a-model-overfit">
+   What happens when a model overfit?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-does-regression-work">
-   How does regression work?
+  <a class="reference internal nav-link" href="#when-does-overfitting-happen">
+   When does overfitting happen?
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-deal-with-overfitting">
+   How to deal with overfitting?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-data">
+     Add data.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduce-model-size">
+     Reduce model size.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reduce-the-hyper-parameters-of-the-model">
+       Reduce the hyper-parameters of the model.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#regularization">
+       Regularization.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -609,16 +653,34 @@
         
               <div>
                 
-  <div class="section" id="regression">
-<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="why-regression">
-<h2>Why regression?<a class="headerlink" href="#why-regression" title="Permalink to this headline">¶</a></h2>
-<p>Well, not all cases are classification problems. There are times where you can easily separate things into labels. For example, if the probability of rain is 59% and 60%, you’ll think that it’s basically the same. However, getting 59 and 60 in an exam can mean failing the semester vs passing the semester. In these two cases, we say the first one is a regression problem and the second one a classification one. We need regression instead of classification when it just makes no sense to even try separate close numbers.</p>
+  <div class="section" id="overfit">
+<h1>Overfit<a class="headerlink" href="#overfit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-happens-when-a-model-overfit">
+<h2>What happens when a model overfit?<a class="headerlink" href="#what-happens-when-a-model-overfit" title="Permalink to this headline">¶</a></h2>
+<p>An overfitting model seems to perform really well when you train it. In training it yields very small losses. However, it may perform terribly when evaluating the data.</p>
 </div>
-<div class="section" id="how-does-regression-work">
-<h2>How does regression work?<a class="headerlink" href="#how-does-regression-work" title="Permalink to this headline">¶</a></h2>
-<p>Image we are predicting the stock market next year (again, not a wise thing to do, but a good example). You noticed in the previous years that the stock market index is related to the number of your hairs by the relation <span class="math notranslate nohighlight">\( s = 0.05h - 3000 \)</span>, <span class="math notranslate nohighlight">\( s \)</span> is the index and <span class="math notranslate nohighlight">\( h \)</span> is the number of hair. You create a model and then make a profit, while doing hair transplants to ensure that the stock performs well.</p>
-<p>In this case, you created a model that maps some inputs (the number of hairs) to some outputs (in this case, the number of stock). If you can find a good model that does this mapping well, then you found a good regressor.</p>
+<div class="section" id="when-does-overfitting-happen">
+<h2>When does overfitting happen?<a class="headerlink" href="#when-does-overfitting-happen" title="Permalink to this headline">¶</a></h2>
+<p>Generally speaking, the more data you have, the bigger model you’ll be using. Overfitting happens when you don’t have enough data for your model. Or your model is too big for the task.</p>
+</div>
+<div class="section" id="how-to-deal-with-overfitting">
+<h2>How to deal with overfitting?<a class="headerlink" href="#how-to-deal-with-overfitting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-data">
+<h3>Add data.<a class="headerlink" href="#add-data" title="Permalink to this headline">¶</a></h3>
+<p>Overfitting happens when data is too few relative to model size. So adding data will help.</p>
+</div>
+<div class="section" id="reduce-model-size">
+<h3>Reduce model size.<a class="headerlink" href="#reduce-model-size" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="reduce-the-hyper-parameters-of-the-model">
+<h4>Reduce the hyper-parameters of the model.<a class="headerlink" href="#reduce-the-hyper-parameters-of-the-model" title="Permalink to this headline">¶</a></h4>
+<p>Making the model smaller will definitely help with solving overfitting. However, this is not a practical solution because to reduce the model’s hyper-parameters, the model will have to be re-trained in the process, and that’s a lot of computing power!</p>
+</div>
+<div class="section" id="regularization">
+<h4>Regularization.<a class="headerlink" href="#regularization" title="Permalink to this headline">¶</a></h4>
+<p>p
+Regularization is a technique to make a model smaller than it is. Regularization makes the model smaller by paralyzing part of the model. For example: dropout layers purposefully drops out part of the model’s inner layer output to make the inner layers appear smaller. L1 and L2 regularization induced penalties on big weights and encourages weights to go to zero so that the inner layer’s effective nodes are reduced (zero stops the data from flowing).</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -635,7 +697,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./tasks/regression"
+            path: "./issues/data"
         },
         predefinedOutput: true
     }
@@ -647,8 +709,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../tasks.html" title="previous page">Types of tasks</a>
-    <a class='right-next' id="next-link" href="../classification/classification.html" title="next page">Classification</a>
+    <a class='left-prev' id="prev-link" href="../lr/lr.html" title="previous page">Learning Rate</a>
+    <a class='right-next' id="next-link" href="underfit.html" title="next page">Underfit</a>
 
         </div>
         

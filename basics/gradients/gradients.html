@@ -347,6 +347,16 @@
    Learning Rate
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../issues/data/overfit.html">
+   Overfit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../issues/data/underfit.html">
+   Underfit
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -618,7 +628,7 @@
 <h1>Gradients<a class="headerlink" href="#gradients" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="why-are-gradients-useful">
 <h2>Why are gradients useful?<a class="headerlink" href="#why-are-gradients-useful" title="Permalink to this headline">¶</a></h2>
-<p>Gradients are useful because it gives us information about the surface around the parameter. It tells us how we can update the parameters and get a better result.</p>
+<p>Gradients are useful because it gives us information about the surface around the parameter. Gradient always points upwards, it tells us the direction in order to maximize the result.</p>
 <p>There are many optimization methods rely on the existence of gradients. The most prominent one is the one used in deep learning, gradient descent. That’s why we need differentiable functions, functions that we can take gradients of, in deep learning in general.</p>
 </div>
 <div class="section" id="how-to-determine-if-a-function-is-differentiable">
