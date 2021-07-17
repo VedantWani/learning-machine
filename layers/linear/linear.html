@@ -146,7 +146,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../basics/gradients/torch-cal-grads.html">
+    <a class="reference internal" href="../../basics/gradients/back-prop.html">
      How Gradients Are Calculated?
     </a>
    </li>
@@ -678,11 +678,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.3572, -0.0016, -0.0172],
-        [ 0.0585,  0.4524, -0.5629],
-        [ 0.2990, -0.1274,  0.0123],
-        [ 0.2175, -0.1944,  0.0631]])
-tensor([ 0.4689, -0.3301,  0.2554,  0.2420])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.5612, -0.3838, -0.4288],
+        [ 0.5699, -0.2927,  0.4194],
+        [ 0.2771, -0.3580,  0.2216],
+        [-0.2418, -0.2045,  0.1527]])
+tensor([ 0.4254, -0.3995, -0.0190, -0.3730])
 </pre></div>
 </div>
 </div>
@@ -700,8 +700,8 @@ tensor([ 0.4689, -0.3301,  0.2554,  0.2420])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([ 0.0569, -1.0556,  0.3365,  0.2602], grad_fn=&lt;AddBackward0&gt;)
-tensor([ 0.0569, -1.0556,  0.3365,  0.2602], grad_fn=&lt;AddBackward0&gt;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([-2.1898,  0.8434,  0.2069, -0.5657], grad_fn=&lt;AddBackward0&gt;)
+tensor([-2.1898,  0.8434,  0.2069, -0.5657], grad_fn=&lt;AddBackward0&gt;)
 tensor([True, True, True, True])
 </pre></div>
 </div>
