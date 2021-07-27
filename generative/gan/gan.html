@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/generative/gan/gan.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -598,6 +600,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-gans-do">
+   What do GANs do?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-gans-work">
+   How do GANs work?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gans-in-algorithm">
+   GANs in algorithm.
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -608,6 +633,32 @@
                 
   <div class="section" id="generative-adversarial-models">
 <h1>Generative Adversarial Models<a class="headerlink" href="#generative-adversarial-models" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generative adversarial networks are often abbreviated as GANs.</p>
+</div>
+<div class="section" id="what-do-gans-do">
+<h2>What do GANs do?<a class="headerlink" href="#what-do-gans-do" title="Permalink to this headline">¶</a></h2>
+<p>GANs are used to generate things. A face generator may use GANs to generate new faces. A property owner may use GANs to generate the images of their property. GANs are used when we need almost-good-as-real data. Such as a fake photo, fake song etc.</p>
+</div>
+<div class="section" id="how-do-gans-work">
+<h2>How do GANs work?<a class="headerlink" href="#how-do-gans-work" title="Permalink to this headline">¶</a></h2>
+<p>Generating things are not easy. Even us humans aren’t that good at producing things. Think of the last time you try to create a new song or paint. It’s really difficult.</p>
+<p>GANs do this by using competition. There are two players in this game: A <strong>generator</strong> and a <strong>discriminator</strong>. A generator is used to generate your target image/audio/video etc. A discriminator is used to tell how good the result is: it tries to tell the real images from the fake ones.</p>
+<p>Initially, both generator and discriminator are bad at doing their jobs. A generator generates things that are very rough. Discriminator has no experiences at all. However, as times go on, both get more experiences. Generators try its best to fool the discriminator, and discriminator try to discriminate the real images from the fake ones. The end result is that generators get so good at creating good images that the images it creates can fool us humans (but maybe not discriminators)!</p>
+</div>
+<div class="section" id="gans-in-algorithm">
+<h2>GANs in algorithm.<a class="headerlink" href="#gans-in-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>Settings:
+Generator <span class="math notranslate nohighlight">\( G \)</span>
+Discriminator <span class="math notranslate nohighlight">\( D \)</span>
+Real data <span class="math notranslate nohighlight">\( X \)</span></p>
+<p>Generate some fake data from <span class="math notranslate nohighlight">\( G \)</span>. We call this fake data <span class="math notranslate nohighlight">\( \tilde{X} \)</span>.
+<span class="math notranslate nohighlight">\( D \)</span> is a binary classifier, which outputs <span class="math notranslate nohighlight">\( 1 \)</span> when <span class="math notranslate nohighlight">\( X \)</span> is encountered, and <span class="math notranslate nohighlight">\( 0 \)</span> when <span class="math notranslate nohighlight">\( \tilde{X} \)</span> is seen.
+<span class="math notranslate nohighlight">\( D \)</span> tries to get the result of <span class="math notranslate nohighlight">\( D(X) \)</span> close to <span class="math notranslate nohighlight">\( 1 \)</span>, and <span class="math notranslate nohighlight">\( D(\tilde{X}) \)</span> close to <span class="math notranslate nohighlight">\( 0 \)</span>.
+<span class="math notranslate nohighlight">\( G \)</span> tries to generate <span class="math notranslate nohighlight">\( \tilde{X} \)</span> so that <span class="math notranslate nohighlight">\( D(\tilde{X}) \)</span> gets close to <span class="math notranslate nohighlight">\( 1 \)</span>.
+Repeat the above procedure many times. Voila, you have a good generator ready to generate fake things!</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
