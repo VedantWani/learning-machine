@@ -54,7 +54,7 @@
     <link rel="canonical" href="https://rentruewang.github.io/tasks/regression/regression.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classification" href="../classification/classification.html" />
+    <link rel="next" title="Auto Regression" href="auto/auto.html" />
     <link rel="prev" title="Types of tasks" href="../tasks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,7 +94,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Getting started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -164,10 +164,22 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Regression
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="auto/auto.html">
+     Auto Regression
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../classification/classification.html">
@@ -190,8 +202,8 @@
   <a class="reference internal" href="../../layers/linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -208,10 +220,27 @@
    Convolution Layer
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../layers/rnn/rnn.html">
    Recurrent Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/rnn/lstm/lstm.html">
+     Long Short Term Memory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/rnn/gru/gru.html">
+     Gated Linear Unit
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../layers/emb/emb.html">
@@ -242,8 +271,8 @@
   <a class="reference internal" href="../../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -289,8 +318,8 @@
   <a class="reference internal" href="../../layers/activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -320,7 +349,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently encountered issues
+  Frequently Encountered Issues
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -375,8 +404,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -411,7 +440,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Improvements to a model
+  Improving Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -443,7 +472,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Using existing models to improve models
+  Reuse Existing Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -470,34 +499,73 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Beyond supervised training
+  Beyond Supervised Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/semi-supervised/semi-supervised.html">
-   Semi Supervised Training
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/unsupervised.html">
+  <a class="reference internal" href="../../unsupervised/unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/decision-tree/decision-tree.html">
-   Decision Tree
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/clustering/clustering.html">
+  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/self-supervised/self-supervised.html">
+  <a class="reference internal" href="../../unsupervised/decision-tree/decision-tree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reinforcement Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reinforce/reinforce.html">
+   Reinforcement Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/state.html">
+     State
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/agent.html">
+     Agent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/action.html">
+     Action
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/reward.html">
+     Reward
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -620,6 +688,8 @@
 <p>Image we are predicting the stock market next year (again, not a wise thing to do, but a good example). You noticed in the previous years that the stock market index is related to the number of your hairs by the relation <span class="math notranslate nohighlight">\( s = 0.05h - 3000 \)</span>, <span class="math notranslate nohighlight">\( s \)</span> is the index and <span class="math notranslate nohighlight">\( h \)</span> is the number of hair. You create a model and then make a profit, while doing hair transplants to ensure that the stock performs well.</p>
 <p>In this case, you created a model that maps some inputs (the number of hairs) to some outputs (in this case, the number of stock). If you can find a good model that does this mapping well, then you found a good regressor.</p>
 </div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -648,7 +718,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../tasks.html" title="previous page">Types of tasks</a>
-    <a class='right-next' id="next-link" href="../classification/classification.html" title="next page">Classification</a>
+    <a class='right-next' id="next-link" href="auto/auto.html" title="next page">Auto Regression</a>
 
         </div>
         

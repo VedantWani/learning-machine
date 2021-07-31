@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clustering &#8212; Learning Machine</title>
+    <title>Self Supervised Learning &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,10 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/not-supervised/clustering/clustering.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/unsupervised/self-supervised/self-supervised.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Self Supervised Learning" href="../self-supervised/self-supervised.html" />
+    <link rel="next" title="Semi Supervised Training" href="../semi-supervised/semi-supervised.html" />
     <link rel="prev" title="Decision Tree" href="../decision-tree/decision-tree.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,7 +92,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Getting started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -162,10 +162,22 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/regression/regression.html">
    Regression
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tasks/regression/auto/auto.html">
+     Auto Regression
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../tasks/classification/classification.html">
@@ -188,8 +200,8 @@
   <a class="reference internal" href="../../layers/linear/linear.html">
    Linear Layer
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -206,10 +218,27 @@
    Convolution Layer
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../layers/rnn/rnn.html">
    Recurrent Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/rnn/lstm/lstm.html">
+     Long Short Term Memory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../layers/rnn/gru/gru.html">
+     Gated Linear Unit
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../layers/emb/emb.html">
@@ -240,8 +269,8 @@
   <a class="reference internal" href="../../layers/transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -287,8 +316,8 @@
   <a class="reference internal" href="../../layers/activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -318,7 +347,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently encountered issues
+  Frequently Encountered Issues
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -373,8 +402,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -409,7 +438,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Improvements to a model
+  Improving Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -441,7 +470,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Using existing models to improve models
+  Reuse Existing Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -468,18 +497,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Beyond supervised training
+  Beyond Supervised Training
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../semi-supervised/semi-supervised.html">
-   Semi Supervised Training
+  <a class="reference internal" href="../unsupervised.html">
+   Unsupervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../unsupervised.html">
-   Unsupervised Learning
+  <a class="reference internal" href="../clustering/clustering.html">
+   Clustering
   </a>
  </li>
  <li class="toctree-l1">
@@ -489,13 +518,52 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Clustering
+   Self Supervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../self-supervised/self-supervised.html">
-   Self Supervised Learning
+  <a class="reference internal" href="../semi-supervised/semi-supervised.html">
+   Semi Supervised Training
   </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reinforcement Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reinforce/reinforce.html">
+   Reinforcement Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/state.html">
+     State
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/agent.html">
+     Agent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/action.html">
+     Action
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/reward.html">
+     Reward
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -538,7 +606,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/not-supervised/clustering/clustering.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/unsupervised/self-supervised/self-supervised.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -558,10 +626,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fnot-supervised/clustering/clustering.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Funsupervised/self-supervised/self-supervised.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/not-supervised/clustering/clustering.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/unsupervised/self-supervised/self-supervised.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -581,7 +649,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/not-supervised/clustering/clustering.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/unsupervised/self-supervised/self-supervised.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -604,36 +672,9 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-clustering-methods">
-   What are clustering methods?
+  <a class="reference internal nav-link" href="#self-supervised-learning-vs-unsupervised-learning">
+   Self supervised learning vs unsupervised learning?
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clustering-clustering-methods">
-   Clustering clustering methods
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#k-means">
-     K-means
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dbscan">
-     DBSCAN
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gmm">
-     GMM
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hierarchy-methods">
-     Hierarchy methods
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -646,38 +687,11 @@
         
               <div>
                 
-  <div class="section" id="clustering">
-<h1>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-are-clustering-methods">
-<h2>What are clustering methods?<a class="headerlink" href="#what-are-clustering-methods" title="Permalink to this headline">¶</a></h2>
-<p>A cluster is a group of things that are close together. Clustering is a very important idea in machine learning in general. Clustering work well with feature vectors, which is a vector of numbers representing features. Because feature vectors that are close to one another is supposed to be related in a deeper way (because of closer features), clustering is very useful in determining whether two data features are in the same group (same cluster).</p>
-</div>
-<div class="section" id="clustering-clustering-methods">
-<h2>Clustering clustering methods<a class="headerlink" href="#clustering-clustering-methods" title="Permalink to this headline">¶</a></h2>
-<p>Most clustering methods are related to the following clustering methods:</p>
-<div class="section" id="k-means">
-<h3>K-means<a class="headerlink" href="#k-means" title="Permalink to this headline">¶</a></h3>
-<p>K-means is a kind of <strong>partition based methods</strong>, which means that it partition the (feature) space into different regions, and predicts arbitrary points in the (feature) space by locating which partition the point falls into.</p>
-<p>K-means is one of the most popular clustering methods, because of how simple it is. Its algorithm is as follows:</p>
-<ol class="simple">
-<li><p>Select initial center points. These points will act as the center of the classes later.</p></li>
-<li><p>Assign class labels to each point using the rule that a point is assigned the label of the closest center.</p></li>
-<li><p>Shifting the center to be the mean of all the points that have the same class label as the center.</p></li>
-<li><p>Repeat.</p></li>
-</ol>
-</div>
-<div class="section" id="dbscan">
-<h3>DBSCAN<a class="headerlink" href="#dbscan" title="Permalink to this headline">¶</a></h3>
-<p>DBSCAN, abbreviation for <strong>D</strong>ensity-<strong>B</strong>ased <strong>S</strong>patial <strong>C</strong>lustering of <strong>A</strong>pplications with <strong>N</strong>oise, is a <strong>density based method</strong>, which means that it clusters the points based on densities. If there are many points in a certain region, the algorithm simply assumes that they are all of the same base class.</p>
-</div>
-<div class="section" id="gmm">
-<h3>GMM<a class="headerlink" href="#gmm" title="Permalink to this headline">¶</a></h3>
-<p><strong>G</strong>aussian <strong>M</strong>ixure <strong>M</strong>odels, introduced previously, can do more than generating data. The Gaussians can fit existing data, and be used to explain clusters with probabilities. A GMM, composed of several Gaussians, can be used to fit the data, and the end results will be several Gaussians, which act as clusters.</p>
-</div>
-<div class="section" id="hierarchy-methods">
-<h3>Hierarchy methods<a class="headerlink" href="#hierarchy-methods" title="Permalink to this headline">¶</a></h3>
-<p>Treating every point as its independent cluster, we combine multiple points into the same cluster and do that until there is one big cluster left. We can then see the hierarchy of the problem: later grouped clusters are inherently farther away form each other than earlier grouped clusters.</p>
-</div>
+  <div class="section" id="self-supervised-learning">
+<h1>Self Supervised Learning<a class="headerlink" href="#self-supervised-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="self-supervised-learning-vs-unsupervised-learning">
+<h2>Self supervised learning vs unsupervised learning?<a class="headerlink" href="#self-supervised-learning-vs-unsupervised-learning" title="Permalink to this headline">¶</a></h2>
+<p>Self-supervised methods are just unsupervised methods, but specifically used to describe the <em>Masked Language Model (MLM)</em> methods used in natural language processing. In the task, the input sentences are randomly masked, and the mission of the model is to find out what the word that is masked is.</p>
 </div>
 </div>
 
@@ -694,7 +708,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./not-supervised/clustering"
+            path: "./unsupervised/self-supervised"
         },
         predefinedOutput: true
     }
@@ -707,7 +721,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../decision-tree/decision-tree.html" title="previous page">Decision Tree</a>
-    <a class='right-next' id="next-link" href="../self-supervised/self-supervised.html" title="next page">Self Supervised Learning</a>
+    <a class='right-next' id="next-link" href="../semi-supervised/semi-supervised.html" title="next page">Semi Supervised Training</a>
 
         </div>
         

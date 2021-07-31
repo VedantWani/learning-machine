@@ -94,7 +94,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Getting started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -164,10 +164,22 @@
    Types of tasks
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tasks/regression/regression.html">
    Regression
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tasks/regression/auto/auto.html">
+     Auto Regression
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../tasks/classification/classification.html">
@@ -190,8 +202,8 @@
   <a class="current reference internal" href="#">
    Linear Layer
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -208,10 +220,27 @@
    Convolution Layer
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../rnn/rnn.html">
    Recurrent Layer
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rnn/lstm/lstm.html">
+     Long Short Term Memory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rnn/gru/gru.html">
+     Gated Linear Unit
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../emb/emb.html">
@@ -242,8 +271,8 @@
   <a class="reference internal" href="../transformer/transformer.html">
    Transformer Block
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -289,8 +318,8 @@
   <a class="reference internal" href="../activation/activation.html">
    Activation Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -320,7 +349,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently encountered issues
+  Frequently Encountered Issues
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -375,8 +404,8 @@
   <a class="reference internal" href="../../generative/ae/ae.html">
    AutoEncoder Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -411,7 +440,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Improvements to a model
+  Improving Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -443,7 +472,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Using existing models to improve models
+  Reuse Existing Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -470,34 +499,73 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Beyond supervised training
+  Beyond Supervised Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/semi-supervised/semi-supervised.html">
-   Semi Supervised Training
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/unsupervised.html">
+  <a class="reference internal" href="../../unsupervised/unsupervised.html">
    Unsupervised Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/decision-tree/decision-tree.html">
-   Decision Tree
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/clustering/clustering.html">
+  <a class="reference internal" href="../../unsupervised/clustering/clustering.html">
    Clustering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../not-supervised/self-supervised/self-supervised.html">
+  <a class="reference internal" href="../../unsupervised/decision-tree/decision-tree.html">
+   Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/self-supervised/self-supervised.html">
    Self Supervised Learning
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unsupervised/semi-supervised/semi-supervised.html">
+   Semi Supervised Training
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reinforcement Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reinforce/reinforce.html">
+   Reinforcement Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/state.html">
+     State
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/agent.html">
+     Agent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/action.html">
+     Action
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reinforce/essential/reward.html">
+     Reward
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -678,11 +746,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.5402,  0.4672,  0.4036],
-        [-0.4493,  0.5630,  0.3490],
-        [-0.0085,  0.4838, -0.1333],
-        [ 0.0284, -0.2639,  0.3837]])
-tensor([0.2938, 0.4811, 0.2614, 0.3376])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.4803,  0.1022, -0.4006],
+        [-0.0189, -0.0025,  0.1335],
+        [-0.2316, -0.2580,  0.5075],
+        [-0.2059, -0.1935, -0.2621]])
+tensor([-0.1267,  0.5260,  0.4069, -0.2309])
 </pre></div>
 </div>
 </div>
@@ -700,8 +768,8 @@ tensor([0.2938, 0.4811, 0.2614, 0.3376])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([2.9791, 2.2046, 0.8207, 0.9893], grad_fn=&lt;AddBackward0&gt;)
-tensor([2.9791, 2.2046, 0.8207, 0.9893], grad_fn=&lt;AddBackward0&gt;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([-0.6438,  0.9026,  1.1818, -1.6099], grad_fn=&lt;AddBackward0&gt;)
+tensor([-0.6438,  0.9026,  1.1818, -1.6099], grad_fn=&lt;AddBackward0&gt;)
 tensor([True, True, True, True])
 </pre></div>
 </div>
