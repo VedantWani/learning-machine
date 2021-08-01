@@ -666,6 +666,11 @@
    How should I choose my LR?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#can-different-learning-rates-be-used-on-different-parameters-at-the-same-time">
+   Can different learning rates be used on different parameters at the same time?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -699,6 +704,10 @@ x' = x - \eta * \frac{df}{dx}
 <div class="section" id="how-should-i-choose-my-lr">
 <h2>How should I choose my LR?<a class="headerlink" href="#how-should-i-choose-my-lr" title="Permalink to this headline">¶</a></h2>
 <p>Initially, we want the LR to be as big as possible (because updates are faster) whenever possible. However, with big LRs, it’s difficult to move into a precise location because it only takes big steps. With training progresses, we want to slightly reduce the LR such that we find a more finetuned solution. Some optmizers sort of do this internally (reducing step size by reducing the gradients’ scale), but we can always use a learning rate scheduler if we want an explicit LR schedule.</p>
+</div>
+<div class="section" id="can-different-learning-rates-be-used-on-different-parameters-at-the-same-time">
+<h2>Can different learning rates be used on different parameters at the same time?<a class="headerlink" href="#can-different-learning-rates-be-used-on-different-parameters-at-the-same-time" title="Permalink to this headline">¶</a></h2>
+<p>The learning rate of different parameters can be different. Algorithms like Adam and Adagrad explicitly re-scales the learning rate to achieve faster training.</p>
 </div>
 </div>
 

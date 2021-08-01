@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/basics/gradients/gradients.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -677,6 +679,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient-descent">
+   Gradient descent.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-determine-if-a-function-is-differentiable">
    How to determine if a function is differentiable?
   </a>
@@ -698,6 +705,16 @@
 <h2>Why are gradients useful?<a class="headerlink" href="#why-are-gradients-useful" title="Permalink to this headline">¶</a></h2>
 <p>Gradients are useful because it gives us information about the surface around the parameter. Gradient always points upwards, it tells us the direction in order to maximize the result.</p>
 <p>There are many optimization methods rely on the existence of gradients. The most prominent one is the one used in deep learning, gradient descent. That’s why we need differentiable functions, functions that we can take gradients of, in deep learning in general.</p>
+</div>
+<div class="section" id="gradient-descent">
+<h2>Gradient descent.<a class="headerlink" href="#gradient-descent" title="Permalink to this headline">¶</a></h2>
+<p>In deep learning models are optimized with a technique called gradient descent. Bascially what gradient descent tries to do is to move along the opposite direction of the gradient, which always points <strong>up</strong>, so moving agianst this direction reduces the loss value.</p>
+<p>The simplest form of gradient descent is:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta' = \theta - \eta \frac{d f}{d \theta}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( \theta' \)</span> denotes the new value of <span class="math notranslate nohighlight">\( \theta \)</span>, and <span class="math notranslate nohighlight">\( \eta \)</span> is waht we call <strong>learning rate</strong> or <strong>step size</strong>. It’s usually a small, positive number.</p>
 </div>
 <div class="section" id="how-to-determine-if-a-function-is-differentiable">
 <h2>How to determine if a function is differentiable?<a class="headerlink" href="#how-to-determine-if-a-function-is-differentiable" title="Permalink to this headline">¶</a></h2>

@@ -710,6 +710,11 @@
    So, how should I choose batch sizes?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees">
+   Is it possible that the model only remembers the last batch it sees?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -796,6 +801,10 @@
 <div class="section" id="so-how-should-i-choose-batch-sizes">
 <h2>So, how should I choose batch sizes?<a class="headerlink" href="#so-how-should-i-choose-batch-sizes" title="Permalink to this headline">¶</a></h2>
 <p>Batch sizes are very tricky. Both too big and too small can make training very slow. So make sure to try different batch sizes and observe before commiting to training the whole dataset.</p>
+</div>
+<div class="section" id="is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees">
+<h2>Is it possible that the model only remembers the last batch it sees?<a class="headerlink" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees" title="Permalink to this headline">¶</a></h2>
+<p>Yes, in theory it’s possible that the model only remembers the last batch it sees if the model isn’t big enough or if you update too much. However, in practice, we iterate over the dataset over and over, and update the model little by little. It’s very unlikely that the model only remembers the last batch it has seen.</p>
 </div>
 </div>
 
