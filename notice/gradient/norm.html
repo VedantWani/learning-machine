@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Rate &#8212; Learning Machine</title>
+    <title>Gradient Vanishing / Gradient Explosion &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,12 +51,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <link rel="canonical" href="https://rentruewang.github.io/issues/lr/lr.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/notice/gradient/norm.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Overfit" href="../data/overfit.html" />
-    <link rel="prev" title="Saddle point" href="../gradient/saddle.html" />
+    <link rel="next" title="Saddle point" href="saddle.html" />
+    <link rel="prev" title="Batch size" href="../batch/batch.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -350,13 +350,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently Encountered Issues
+  Some Other Important Things To Notice
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../issues.html">
-   Frequently Encoutered Issues
+  <a class="reference internal" href="../notice.html">
+   Other Things To Notice
   </a>
  </li>
  <li class="toctree-l1">
@@ -364,19 +364,24 @@
    Batch size
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../gradient/norm.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Gradient Vanishing / Gradient Explosion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../gradient/saddle.html">
+  <a class="reference internal" href="saddle.html">
    Saddle point
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lr/lr.html">
    Learning Rate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../optimizer/optimizer.html">
+   Optimizer
   </a>
  </li>
  <li class="toctree-l1">
@@ -450,10 +455,22 @@
    Improvements to a model
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../better/explainable/explainable.html">
    Explainable AI
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../better/explainable/saliency.html">
+     Saliency Maps
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../better/meta/meta.html">
@@ -540,8 +557,8 @@
   <a class="reference internal" href="../../reinforce/reinforce.html">
    Reinforcement Learning
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -609,7 +626,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/issues/lr/lr.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notice/gradient/norm.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -629,10 +646,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fissues/lr/lr.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fnotice/gradient/norm.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/issues/lr/lr.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/notice/gradient/norm.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -658,19 +675,36 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-lr">
-   What are LR?
+  <a class="reference internal nav-link" href="#what-happens-when-gradients-vanish-or-explode">
+   What happens when gradients vanish or explode?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-should-i-choose-my-lr">
-   How should I choose my LR?
+  <a class="reference internal nav-link" href="#when-do-gradients-vanish-or-explode">
+   When do gradients vanish or explode?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#can-different-learning-rates-be-used-on-different-parameters-at-the-same-time">
-   Can different learning rates be used on different parameters at the same time?
+  <a class="reference internal nav-link" href="#how-to-deal-with-gradient-vanishing-or-explosion">
+   How to deal with gradient vanishing or explosion?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normalization">
+     Normalization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#residual-networks">
+     Residual Networks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#don-t-use-certain-activation-functions">
+     Don’t use certain activation functions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -683,32 +717,37 @@
         
               <div>
                 
-  <div class="section" id="learning-rate">
-<h1>Learning Rate<a class="headerlink" href="#learning-rate" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will abbreviate learning rate as LR.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Learning rate is also called step size.</p>
-</div>
-<div class="section" id="what-are-lr">
-<h2>What are LR?<a class="headerlink" href="#what-are-lr" title="Permalink to this headline">¶</a></h2>
-<p>In vanilla gradient descent, with the LR <span class="math notranslate nohighlight">\( \eta \)</span>, parameter <span class="math notranslate nohighlight">\( x \)</span>, loss function <span class="math notranslate nohighlight">\( f \)</span>, the update formula is as follows:</p>
+  <div class="section" id="gradient-vanishing-gradient-explosion">
+<h1>Gradient Vanishing / Gradient Explosion<a class="headerlink" href="#gradient-vanishing-gradient-explosion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-happens-when-gradients-vanish-or-explode">
+<h2>What happens when gradients vanish or explode?<a class="headerlink" href="#what-happens-when-gradients-vanish-or-explode" title="Permalink to this headline">¶</a></h2>
+<p>Remember that the neural network trains by using chain rules. That is, earlier layers’ gradients are calculated by scaling later layers’ gradients. Chain rule:</p>
 <div class="math notranslate nohighlight">
 \[
-x' = x - \eta * \frac{df}{dx}
+\frac{dy}{dx} = \frac{df}{du} \frac{du}{dx}
 \]</div>
-<p>Other optimizers are updated in a similar fasion. The takeaway is, LR is how much you step forward performing a gradient update. If LR is huge, you update the parameters more. If LR is tiny, you don’t update the parameter as much.</p>
+<p>If later layers gradients are extremely large, then it’s going to scale the earlier gradients by a huge factor. Due to how the computer represent numbers, this number may just be <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>. If later layers gradients are extremely small, then it’s going to scale down the earlier gradients a lot. The earlier gradients may just become <code class="docutils literal notranslate"><span class="pre">0</span></code> in such a case.</p>
+<p>In either cases, the gradients calculated are not true gradients, and may just make the network untrainable. Do you really want to update your parameter by <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>?</p>
 </div>
-<div class="section" id="how-should-i-choose-my-lr">
-<h2>How should I choose my LR?<a class="headerlink" href="#how-should-i-choose-my-lr" title="Permalink to this headline">¶</a></h2>
-<p>Initially, we want the LR to be as big as possible (because updates are faster) whenever possible. However, with big LRs, it’s difficult to move into a precise location because it only takes big steps. With training progresses, we want to slightly reduce the LR such that we find a more finetuned solution. Some optmizers sort of do this internally (reducing step size by reducing the gradients’ scale), but we can always use a learning rate scheduler if we want an explicit LR schedule.</p>
+<div class="section" id="when-do-gradients-vanish-or-explode">
+<h2>When do gradients vanish or explode?<a class="headerlink" href="#when-do-gradients-vanish-or-explode" title="Permalink to this headline">¶</a></h2>
+<p>In very deep networks, vanishing or explosion is more likely to happen. For example, if every layer scales the norm by 10 (not that big considering that there are many parameters in a layer), then after 300 layers (which is not uncommon in current neural networks), the gradients will approach <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>. The same arguments can be applied to vanishing gradients. In deep networks, these things happen quite often.</p>
 </div>
-<div class="section" id="can-different-learning-rates-be-used-on-different-parameters-at-the-same-time">
-<h2>Can different learning rates be used on different parameters at the same time?<a class="headerlink" href="#can-different-learning-rates-be-used-on-different-parameters-at-the-same-time" title="Permalink to this headline">¶</a></h2>
-<p>The learning rate of different parameters can be different. Algorithms like Adam and Adagrad explicitly re-scales the learning rate to achieve faster training.</p>
+<div class="section" id="how-to-deal-with-gradient-vanishing-or-explosion">
+<h2>How to deal with gradient vanishing or explosion?<a class="headerlink" href="#how-to-deal-with-gradient-vanishing-or-explosion" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways to deal with vanishing or exploding gradients.</p>
+<div class="section" id="normalization">
+<h3>Normalization<a class="headerlink" href="#normalization" title="Permalink to this headline">¶</a></h3>
+<p>Normalization makes sure that in training, the size of the gradient does not get out of hand, because it is normalized by passing through this layer.</p>
+</div>
+<div class="section" id="residual-networks">
+<h3>Residual Networks<a class="headerlink" href="#residual-networks" title="Permalink to this headline">¶</a></h3>
+<p>Residual networks reduces the depth of the networks by providing shortcuts. Shallower networks are less likely to have gradient explosion/vanishing problems.</p>
+</div>
+<div class="section" id="don-t-use-certain-activation-functions">
+<h3>Don’t use certain activation functions<a class="headerlink" href="#don-t-use-certain-activation-functions" title="Permalink to this headline">¶</a></h3>
+<p>Activation functions like <code class="docutils literal notranslate"><span class="pre">Sigmoid</span></code>, <code class="docutils literal notranslate"><span class="pre">Softmax</span></code>, <code class="docutils literal notranslate"><span class="pre">Tanh</span></code>, if applied over and over in several layers, will make the gradients of the network is extremely small. This is the reason <code class="docutils literal notranslate"><span class="pre">ReLU</span></code> is popular, because it doesn’t suffer from gradient problems as often.</p>
+</div>
 </div>
 </div>
 
@@ -725,7 +764,7 @@ x' = x - \eta * \frac{df}{dx}
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./issues/lr"
+            path: "./notice/gradient"
         },
         predefinedOutput: true
     }
@@ -737,8 +776,8 @@ x' = x - \eta * \frac{df}{dx}
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../gradient/saddle.html" title="previous page">Saddle point</a>
-    <a class='right-next' id="next-link" href="../data/overfit.html" title="next page">Overfit</a>
+    <a class='left-prev' id="prev-link" href="../batch/batch.html" title="previous page">Batch size</a>
+    <a class='right-next' id="next-link" href="saddle.html" title="next page">Saddle point</a>
 
         </div>
         

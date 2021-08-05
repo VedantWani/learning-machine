@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saddle point &#8212; Learning Machine</title>
+    <title>Optimizer &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/issues/gradient/saddle.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/notice/optimizer/optimizer.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Learning Rate" href="../lr/lr.html" />
-    <link rel="prev" title="Gradient Vanishing / Gradient Explosion" href="norm.html" />
+    <link rel="next" title="Overfit" href="../data/overfit.html" />
+    <link rel="prev" title="Learning Rate" href="../lr/lr.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -348,13 +348,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently Encountered Issues
+  Some Other Important Things To Notice
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../issues.html">
-   Frequently Encoutered Issues
+  <a class="reference internal" href="../notice.html">
+   Other Things To Notice
   </a>
  </li>
  <li class="toctree-l1">
@@ -363,18 +363,23 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="norm.html">
+  <a class="reference internal" href="../gradient/norm.html">
    Gradient Vanishing / Gradient Explosion
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gradient/saddle.html">
    Saddle point
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lr/lr.html">
    Learning Rate
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Optimizer
   </a>
  </li>
  <li class="toctree-l1">
@@ -448,10 +453,22 @@
    Improvements to a model
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../better/explainable/explainable.html">
    Explainable AI
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../better/explainable/saliency.html">
+     Saliency Maps
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../better/meta/meta.html">
@@ -538,8 +555,8 @@
   <a class="reference internal" href="../../reinforce/reinforce.html">
    Reinforcement Learning
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -607,7 +624,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/issues/gradient/saddle.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notice/optimizer/optimizer.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -627,10 +644,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fissues/gradient/saddle.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fnotice/optimizer/optimizer.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/issues/gradient/saddle.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/notice/optimizer/optimizer.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -645,6 +662,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/notice/optimizer/optimizer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -656,18 +690,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-saddle-point">
-   What is a saddle point?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#when-do-saddle-points-appear">
-   When do saddle points appear?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-not-to-worry-about-saddle-points">
-   Why not to worry about saddle points?
+  <a class="reference internal nav-link" href="#what-are-optimizers">
+   What are optimizers?
   </a>
  </li>
 </ul>
@@ -681,19 +705,11 @@
         
               <div>
                 
-  <div class="section" id="saddle-point">
-<h1>Saddle point<a class="headerlink" href="#saddle-point" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-a-saddle-point">
-<h2>What is a saddle point?<a class="headerlink" href="#what-is-a-saddle-point" title="Permalink to this headline">¶</a></h2>
-<p>A saddle point is a point where all the slopes and derivatives are all zero, but is not the minimum (or maximum) of the loss function. When the parameter is very close to the saddle point, the gradient gets extremely close to zero, and may slow down training. We call this phenomenon <em>“stuck in the saddle point”</em>, though visually speaking, it should be called <em>sitting on the saddle</em>.</p>
-</div>
-<div class="section" id="when-do-saddle-points-appear">
-<h2>When do saddle points appear?<a class="headerlink" href="#when-do-saddle-points-appear" title="Permalink to this headline">¶</a></h2>
-<p>Saddle points appear where all the dimension has zero derivative. Usually this means that there’s a local minimum or local maximum (which is less likely, as gradients should point away from maximums). However, there are also chances that this is a saddle point.</p>
-</div>
-<div class="section" id="why-not-to-worry-about-saddle-points">
-<h2>Why not to worry about saddle points?<a class="headerlink" href="#why-not-to-worry-about-saddle-points" title="Permalink to this headline">¶</a></h2>
-<p>Saddle points exist, no doubt. However, encountering one is very unlikely especially for very large nets. To have a chance of being stuck in a saddle point, we have to cross out fingers and hope that all (not some) parameters are stuck in their maximum. Sounds unlikely, right? Even if some parameters are stuck in their maximum, it usually does not matter when 99.999% of the parameterss are in their minimum. (That maximum has to be huge!) With larger nets, it’s even less likely that we encounter saddle points that do affect our training. So don’t fear!</p>
+  <div class="section" id="optimizer">
+<h1>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-are-optimizers">
+<h2>What are optimizers?<a class="headerlink" href="#what-are-optimizers" title="Permalink to this headline">¶</a></h2>
+<p>Optimizers are responsible for making the updates to your model. A good optimizer can help your model converge faster by using momemtum to roll past terrain where gradients are small, while not skipping the convergence point. A good optmizing strategy is essential in trainig effectively.</p>
 </div>
 </div>
 
@@ -710,7 +726,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./issues/gradient"
+            path: "./notice/optimizer"
         },
         predefinedOutput: true
     }
@@ -722,8 +738,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="norm.html" title="previous page">Gradient Vanishing / Gradient Explosion</a>
-    <a class='right-next' id="next-link" href="../lr/lr.html" title="next page">Learning Rate</a>
+    <a class='left-prev' id="prev-link" href="../lr/lr.html" title="previous page">Learning Rate</a>
+    <a class='right-next' id="next-link" href="../data/overfit.html" title="next page">Overfit</a>
 
         </div>
         

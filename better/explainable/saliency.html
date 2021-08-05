@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batch size &#8212; Learning Machine</title>
+    <title>Saliency Maps &#8212; Learning Machine</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://rentruewang.github.io/issues/batch/batch.html" />
+    <link rel="canonical" href="https://rentruewang.github.io/better/explainable/saliency.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Gradient Vanishing / Gradient Explosion" href="../gradient/norm.html" />
-    <link rel="prev" title="Frequently Encoutered Issues" href="../issues.html" />
+    <link rel="next" title="Meta Learning" href="../meta/meta.html" />
+    <link rel="prev" title="Explainable AI" href="explainable.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -348,42 +348,47 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Frequently Encountered Issues
+  Some Other Important Things To Notice
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../issues.html">
-   Frequently Encoutered Issues
+  <a class="reference internal" href="../../notice/notice.html">
+   Other Things To Notice
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notice/batch/batch.html">
    Batch size
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../gradient/norm.html">
+  <a class="reference internal" href="../../notice/gradient/norm.html">
    Gradient Vanishing / Gradient Explosion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../gradient/saddle.html">
+  <a class="reference internal" href="../../notice/gradient/saddle.html">
    Saddle point
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lr/lr.html">
+  <a class="reference internal" href="../../notice/lr/lr.html">
    Learning Rate
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../data/overfit.html">
+  <a class="reference internal" href="../../notice/optimizer/optimizer.html">
+   Optimizer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notice/data/overfit.html">
    Overfit
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../data/underfit.html">
+  <a class="reference internal" href="../../notice/data/underfit.html">
    Underfit
   </a>
  </li>
@@ -442,29 +447,41 @@
   Improving Models
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/better.html">
+  <a class="reference internal" href="../better.html">
    Improvements to a model
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../better/explainable/explainable.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="explainable.html">
    Explainable AI
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Saliency Maps
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/meta/meta.html">
+  <a class="reference internal" href="../meta/meta.html">
    Meta Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/lll/lll.html">
+  <a class="reference internal" href="../lll/lll.html">
    Life Long Learning
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../better/compression/compression.html">
+  <a class="reference internal" href="../compression/compression.html">
    Model Compression
   </a>
  </li>
@@ -538,8 +555,8 @@
   <a class="reference internal" href="../../reinforce/reinforce.html">
    Reinforcement Learning
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -607,7 +624,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/issues/batch/batch.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/better/explainable/saliency.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -627,10 +644,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fissues/batch/batch.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rentruewang/learning-machine/issues/new?title=Issue%20on%20page%20%2Fbetter/explainable/saliency.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/issues/batch/batch.ipynb"><button
+        <a class="edit-button" href="https://github.com/rentruewang/learning-machine/edit/main/book/better/explainable/saliency.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -645,23 +662,6 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/issues/batch/batch.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -673,47 +673,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-batches">
-   What are batches
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#batch-size-too-small">
-   Batch size too small
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-takes-a-long-time">
-     Training takes a long time.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-training-does-not-converge">
-     The training does not converge.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#batch-size-too-big">
-   Batch size too big
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-takes-a-lot-of-time">
-     Training takes a lot of time.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#so-how-should-i-choose-batch-sizes">
-   So, how should I choose batch sizes?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees">
-   Is it possible that the model only remembers the last batch it sees?
+  <a class="reference internal nav-link" href="#what-are-saliency-maps">
+   What are saliency maps?
   </a>
  </li>
 </ul>
@@ -727,85 +688,11 @@
         
               <div>
                 
-  <div class="section" id="batch-size">
-<h1>Batch size<a class="headerlink" href="#batch-size" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-are-batches">
-<h2>What are batches<a class="headerlink" href="#what-are-batches" title="Permalink to this headline">¶</a></h2>
-<p>Machine learning models are usually trained on batches of data. A batch is simply a number (usually the power of 2), that a model trains itself on in an iteration. For example, batch size 32 means that the model takes in these 32 entries of data, averaging its output, and trains on the 32 labels of the entires.</p>
-</div>
-<div class="section" id="batch-size-too-small">
-<h2>Batch size too small<a class="headerlink" href="#batch-size-too-small" title="Permalink to this headline">¶</a></h2>
-<p>When batch sizes are too small, there are several issues that we may encounter.</p>
-<div class="section" id="training-takes-a-long-time">
-<h3>Training takes a long time.<a class="headerlink" href="#training-takes-a-long-time" title="Permalink to this headline">¶</a></h3>
-<p>When training on GPUs, data is sent to the GPU batch by batch, with the overhead of transfering data back and forth. If the batch size is too small, we spend a much higher percentage of time sending data than actually computing. This is the reason we usually prefer bigger batches.</p>
-</div>
-<div class="section" id="the-training-does-not-converge">
-<h3>The training does not converge.<a class="headerlink" href="#the-training-does-not-converge" title="Permalink to this headline">¶</a></h3>
-<p>In probability theory, variance measures how much the input varies, how close on average are two inputs. Let’s plot two distributions with different variances.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">variance</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mu</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span> <span class="n">mu</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/batch_6_0.png" src="../../_images/batch_6_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">variance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mu</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span> <span class="n">mu</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/batch_7_0.png" src="../../_images/batch_7_0.png" />
-</div>
-</div>
-<p>See how the first distribution is narrower than the second distribution. That means, the number sampled (numbers yielded from) the distribution is closer to one another, and changes little. A smaller variance helps the machine learning model to learn faster, because it’s easier to learn from a simpler input than from inputs that can change a lot. For that reason, averages are easier to learn than individuals.</p>
-</div>
-</div>
-<div class="section" id="batch-size-too-big">
-<h2>Batch size too big<a class="headerlink" href="#batch-size-too-big" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="training-takes-a-lot-of-time">
-<h3>Training takes a lot of time.<a class="headerlink" href="#training-takes-a-lot-of-time" title="Permalink to this headline">¶</a></h3>
-<p>When batch size is too big, trainig can also take a long time, but for different reasons. It’s again related to variance.</p>
-<p>There are certain problems in machine learning that gradients can be small, close to 0. In such a case, when the batch is overly big, the gradients can average so close to zero that it hinders progress of convergence. Well, worry not! Most of us aren’t rich enough to use those kind of batch sizes (because of expensive GPUs).</p>
-</div>
-</div>
-<div class="section" id="so-how-should-i-choose-batch-sizes">
-<h2>So, how should I choose batch sizes?<a class="headerlink" href="#so-how-should-i-choose-batch-sizes" title="Permalink to this headline">¶</a></h2>
-<p>Batch sizes are very tricky. Both too big and too small can make training very slow. So make sure to try different batch sizes and observe before commiting to training the whole dataset.</p>
-</div>
-<div class="section" id="is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees">
-<h2>Is it possible that the model only remembers the last batch it sees?<a class="headerlink" href="#is-it-possible-that-the-model-only-remembers-the-last-batch-it-sees" title="Permalink to this headline">¶</a></h2>
-<p>Yes, in theory it’s possible that the model only remembers the last batch it sees if the model isn’t big enough or if you update too much. However, in practice, we iterate over the dataset over and over, and update the model little by little. It’s very unlikely that the model only remembers the last batch it has seen.</p>
+  <div class="section" id="saliency-maps">
+<h1>Saliency Maps<a class="headerlink" href="#saliency-maps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-are-saliency-maps">
+<h2>What are saliency maps?<a class="headerlink" href="#what-are-saliency-maps" title="Permalink to this headline">¶</a></h2>
+<p>Saliency maps aims to display <em>what part of the input is the most important part for a model.</em> It tries to do so by trying to maximize the input (with respect to an classifier output). For example, we have a picture of a panda, and our model tells us so. To generate a saliency map, we try to maximize the label <code class="docutils literal notranslate"><span class="pre">panda</span></code> by modifying the input. If we In other words, <strong>a saliency map is generated by trying to maximize the chance of the picture being classified.</strong> Most of the time, we use the gradient <em>ascent</em> algorithm to achieve this.</p>
 </div>
 </div>
 
@@ -822,7 +709,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./issues/batch"
+            path: "./better/explainable"
         },
         predefinedOutput: true
     }
@@ -834,8 +721,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../issues.html" title="previous page">Frequently Encoutered Issues</a>
-    <a class='right-next' id="next-link" href="../gradient/norm.html" title="next page">Gradient Vanishing / Gradient Explosion</a>
+    <a class='left-prev' id="prev-link" href="explainable.html" title="previous page">Explainable AI</a>
+    <a class='right-next' id="next-link" href="../meta/meta.html" title="next page">Meta Learning</a>
 
         </div>
         
