@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -511,7 +511,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../reuse/distil/distil.html">
-   Knowledge Distilation
+   Knowledge Distillation
   </a>
  </li>
 </ul>
@@ -727,7 +727,7 @@
 \frac{dy}{dx} = \frac{df}{du} \frac{du}{dx}
 \]</div>
 <p>If later layers gradients are extremely large, then it’s going to scale the earlier gradients by a huge factor. Due to how the computer represent numbers, this number may just be <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>. If later layers gradients are extremely small, then it’s going to scale down the earlier gradients a lot. The earlier gradients may just become <code class="docutils literal notranslate"><span class="pre">0</span></code> in such a case.</p>
-<p>In either cases, the gradients calculated are not true gradients, and may just make the network untrainable. Do you really want to update your parameter by <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>?</p>
+<p>In either cases, the gradients calculated are not true gradients, and may just make the network un-trainable. Do you really want to update your parameter by <code class="docutils literal notranslate"><span class="pre">INFINITY</span></code>?</p>
 </div>
 <div class="section" id="when-do-gradients-vanish-or-explode">
 <h2>When do gradients vanish or explode?<a class="headerlink" href="#when-do-gradients-vanish-or-explode" title="Permalink to this headline">¶</a></h2>

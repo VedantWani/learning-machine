@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -511,7 +511,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../reuse/distil/distil.html">
-   Knowledge Distilation
+   Knowledge Distillation
   </a>
  </li>
 </ul>
@@ -730,7 +730,7 @@
 <div class="section" id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <p>softmax(<span class="math notranslate nohighlight">\( x_i \)</span>) = <span class="math notranslate nohighlight">\( \frac{e^{x_i}}{\sum_j e^{x_j}} \)</span></p>
-<p>With temparature</p>
+<p>With temperature</p>
 <p>softmax(<span class="math notranslate nohighlight">\( x_i \)</span>, <span class="math notranslate nohighlight">\( t \)</span>) = <span class="math notranslate nohighlight">\( \frac{e^{\frac{x_i}{t}}}{\sum_j e^{\frac{x_j}{t}}} \)</span></p>
 </div>
 <div class="section" id="how-does-softmax-look-and-how-it-works-in-code">
@@ -769,8 +769,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.99534349  0.92711704 -0.44725897  1.57790717 -0.03436359]
-[0.03954082 0.27037071 0.06840309 0.51831552 0.10336986]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.99433861  0.94609306 -1.72158752 -1.0491998   0.26478822]
+[0.07743562 0.53908787 0.03741973 0.07330184 0.27275494]
 </pre></div>
 </div>
 </div>
@@ -787,9 +787,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20561163372083607
-0.9950163208034525
-1.5779071749880873
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.5108489304467895
+0.36392274594774227
+0.946093057851572
 </pre></div>
 </div>
 </div>
@@ -806,9 +806,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20561163372083607
-1.5769377343890272
-1.5779071749880873
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.5108489304467895
+0.945344885452182
+0.946093057851572
 </pre></div>
 </div>
 </div>

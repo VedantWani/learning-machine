@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -511,7 +511,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../reuse/distil/distil.html">
-   Knowledge Distilation
+   Knowledge Distillation
   </a>
  </li>
 </ul>
@@ -728,7 +728,7 @@
 <p>Without activations, deep learning is meaningless. To understand why that’s the case, we use a very simple example.</p>
 <p>Suppose that there is a small neural network that has only two layer. To simplify the problem further, let’s assume that these two layers only have weight matrices but not bias matrices. That is, the network can be represented by the function: <span class="math notranslate nohighlight">\( F(x) = (B)(A) x \)</span>, with <span class="math notranslate nohighlight">\( A \)</span> the weight of the first layer, and <span class="math notranslate nohighlight">\( B \)</span> the weight of the second layer.</p>
 <p>However, we can see the function in a different way: <span class="math notranslate nohighlight">\( F(x) = (BA)x \)</span>, which means that we can construct a simpler network, with only one layer, whose weight matrix is <span class="math notranslate nohighlight">\( BA \)</span>, that does the exactly same thing! It means that adding layer literally doesn’t really help us in anyway.</p>
-<p>Truly, becaue of how every neural network can be thought of as a chain of matrix multiplications, simply adding more linear layers are never going to help expand the type of functions that we want to approximate, because with only linear functions, we can only approximate linear functions! That’s without activation function.</p>
+<p>Truly, because of how every neural network can be thought of as a chain of matrix multiplications, simply adding more linear layers are never going to help expand the type of functions that we want to approximate, because with only linear functions, we can only approximate linear functions! That’s without activation function.</p>
 <p>If we apply activation <span class="math notranslate nohighlight">\( \sigma \)</span> to the network: <span class="math notranslate nohighlight">\( F(X) = \sigma (((B) \sigma (A) ) x \)</span>, then we can’t decompose the function easily. In fact, with enough layers, the function would be so complicated that it can approximate any function! And that’s all because of the power of activation functions.</p>
 </div>
 <div class="toctree-wrapper compound">

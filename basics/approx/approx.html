@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -511,7 +511,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../reuse/distil/distil.html">
-   Knowledge Distilation
+   Knowledge Distillation
   </a>
  </li>
 </ul>
@@ -725,8 +725,8 @@
 </div>
 <div class="section" id="what-is-an-approximation-model">
 <h2>What is an approximation model?<a class="headerlink" href="#what-is-an-approximation-model" title="Permalink to this headline">¶</a></h2>
-<p>Mathematically speaking, an approximation model approxiates (but may never be) the output function. For example, we can approximate <span class="math notranslate nohighlight">\( 0 \)</span> with the function <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span>. When <span class="math notranslate nohighlight">\( x \rightarrow \inf \)</span>, the function <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span> is very close to <span class="math notranslate nohighlight">\( 0 \)</span>, however, <span class="math notranslate nohighlight">\( x \)</span> is never <span class="math notranslate nohighlight">\( 0 \)</span>, but it gets so close that we don’t care about that anymore.</p>
-<p>A machine learning model is no different. Taking the cat/dog differentiator for example. Since mapping from images and labels can be seen as a function’s inputs and outputs, if we can use a model to approxiate the mapping, and do a well enough job, then the model is essentially a good appproximation model to the function that maps from cat images to cat labels and dog images to dog labels.</p>
+<p>Mathematically speaking, an approximation model approximates (but may never be) the output function. For example, we can approximate <span class="math notranslate nohighlight">\( 0 \)</span> with the function <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span>. When <span class="math notranslate nohighlight">\( x \rightarrow \inf \)</span>, the function <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span> gets very close to <span class="math notranslate nohighlight">\( 0 \)</span>. Notice that <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span> can never become <span class="math notranslate nohighlight">\( 0 \)</span> no matter how big <span class="math notranslate nohighlight">\( x \)</span> gets, but <span class="math notranslate nohighlight">\( \frac{1}{x} \)</span> gets close enough to <span class="math notranslate nohighlight">\( 0 \)</span> that we don’t care about that anymore.</p>
+<p>A machine learning model is no different. Taking the cat/dog differentiator for example. Since mapping from images and labels can be seen as a function’s inputs and outputs, if we can use a model to approximate the mapping, and do a well enough job, then the model is essentially a good appproximation model to the function that maps from cat images to cat labels and dog images to dog labels.</p>
 </div>
 <div class="section" id="how-well-can-a-model-approximate">
 <h2>How well can a model approximate?<a class="headerlink" href="#how-well-can-a-model-approximate" title="Permalink to this headline">¶</a></h2>
@@ -780,7 +780,7 @@
 <li><p>One layer with three nodes.</p></li>
 <li><p>Three layers with one node each.</p></li>
 </ol>
-<p>For model 1, it could separate all possible inputs (numbers) into 4 intervals (becasue each neuron separates the current interval in half.)
+<p>For model 1, it could separate all possible inputs (numbers) into 4 intervals (because each neuron separates the current interval in half.)
 For model 2, because every neuron depends on the neuron comes before it, it could separate all possible inputs (numbers) into 8 intervals (2 to the power of 3).</p>
 <p>8 is bigger than 4!</p>
 <p>The reason deeper models perform better follows the same reason.</p>

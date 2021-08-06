@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -511,7 +511,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../reuse/distil/distil.html">
-   Knowledge Distilation
+   Knowledge Distillation
   </a>
  </li>
 </ul>
@@ -717,11 +717,11 @@
 \[
 x' = x - \eta * \frac{df}{dx}
 \]</div>
-<p>Other optimizers are updated in a similar fasion. The takeaway is, LR is how much you step forward performing a gradient update. If LR is huge, you update the parameters more. If LR is tiny, you don’t update the parameter as much.</p>
+<p>Other optimizers are updated in a similar fashion. The takeaway is, LR is how much you step forward performing a gradient update. If LR is huge, you update the parameters more. If LR is tiny, you don’t update the parameter as much.</p>
 </div>
 <div class="section" id="how-should-i-choose-my-lr">
 <h2>How should I choose my LR?<a class="headerlink" href="#how-should-i-choose-my-lr" title="Permalink to this headline">¶</a></h2>
-<p>Initially, we want the LR to be as big as possible (because updates are faster) whenever possible. However, with big LRs, it’s difficult to move into a precise location because it only takes big steps. With training progresses, we want to slightly reduce the LR such that we find a more finetuned solution. Some optmizers sort of do this internally (reducing step size by reducing the gradients’ scale), but we can always use a learning rate scheduler if we want an explicit LR schedule.</p>
+<p>Initially, we want the LR to be as big as possible (because updates are faster) whenever possible. However, with big LRs, it’s difficult to move into a precise location because it only takes big steps. With training progresses, we want to slightly reduce the LR such that we find a more finetuned solution. Some optimizers sort of do this internally (reducing step size by reducing the gradients’ scale), but we can always use a learning rate scheduler if we want an explicit LR schedule.</p>
 </div>
 <div class="section" id="can-different-learning-rates-be-used-on-different-parameters-at-the-same-time">
 <h2>Can different learning rates be used on different parameters at the same time?<a class="headerlink" href="#can-different-learning-rates-be-used-on-different-parameters-at-the-same-time" title="Permalink to this headline">¶</a></h2>
