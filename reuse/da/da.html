@@ -49,12 +49,14 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://rentruewang.github.io/reuse/da/da.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Transfer Learning" href="../transfer/transfer.html" />
-    <link rel="prev" title="Reusing Existing Models" href="../reuse.html" />
+    <link rel="next" title="Transfer Learning vs Domain Adaptation" href="transfer-vs-da.html" />
+    <link rel="prev" title="Transfer Learning" href="../transfer/transfer.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -497,15 +499,27 @@
    Reusing Existing Models
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Domain Adaptation
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../transfer/transfer.html">
    Transfer Learning
   </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Domain Adaptation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="transfer-vs-da.html">
+     Transfer Learning vs Domain Adaptation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../distil/distil.html">
@@ -555,8 +569,8 @@
   <a class="reference internal" href="../../reinforce/reinforce.html">
    Reinforcement Learning
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -662,11 +676,63 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rentruewang/learning-machine/main?urlpath=tree/book/reuse/da/da.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-do-we-need-domain-adaptation">
+   When do we need domain adaptation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-techniques-in-domain-adaptation">
+   Different techniques in domain adaptation.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discrepancy-based-methods">
+     Discrepancy-based methods.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adversarial-based-methods">
+     Adversarial-based methods.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reconstruction-based-methods">
+     Reconstruction-based methods.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -677,7 +743,38 @@
                 
   <div class="section" id="domain-adaptation">
 <h1>Domain Adaptation<a class="headerlink" href="#domain-adaptation" title="Permalink to this headline">¶</a></h1>
-<p>TODO</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will use the abbreviation DA for domain adaptation.</p>
+</div>
+<div class="section" id="when-do-we-need-domain-adaptation">
+<h2>When do we need domain adaptation?<a class="headerlink" href="#when-do-we-need-domain-adaptation" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that you are born and raised in the US, you’ve not learned a foreign language, and you’ve never been to another country. Now all of a sudden you are thrown into a small town in Russia, what would you think?</p>
+<p>Machine learning models feel the same way when you feed them completely different inputs. For example, when a model has only seen MNIST digits, but now you’re asking it to classify Full-HD, colorful, picturesque printed numbers taken from a photo, it’s no wonder that your model decides not to work.</p>
+<p>However, those Full-HD numbers are still numbers right? Sure they have something in common with MNIST? Indeed, the same number 1 share some traits and the same number 2 also are roughly similar (just like Russian and English, they are both from humans). But it’s still different enough that the machine learning model decides to give up.</p>
+<p>DA aims to solve that. What DA tries to do, is to make a model work across several similar environments that are different. By applying techniques in DA, a model can perform better in not-so-similar-but-arguably-the-same environments, compared to the the environment where the model is trained.</p>
+</div>
+<div class="section" id="different-techniques-in-domain-adaptation">
+<h2>Different techniques in domain adaptation.<a class="headerlink" href="#different-techniques-in-domain-adaptation" title="Permalink to this headline">¶</a></h2>
+<p>Most DA methods fall in one of the following three categories.</p>
+<div class="section" id="discrepancy-based-methods">
+<h3>Discrepancy-based methods.<a class="headerlink" href="#discrepancy-based-methods" title="Permalink to this headline">¶</a></h3>
+<p>Discrepancy-based methods utilize a <strong>feature-extractor</strong> and a very simple <strong>classifier</strong>. Those methods try to align the <strong>statistical measures</strong> of features of different domains.</p>
+<p>For example, we have a text feature-extractor, trained on news. Suppose that when reading from news, the mean of the features is <span class="math notranslate nohighlight">\( \mu \)</span> and the stddev <span class="math notranslate nohighlight">\( \sigma \)</span>. When reading from medical documents, the mean of the features is <span class="math notranslate nohighlight">\( \mu' \)</span> and the stddev <span class="math notranslate nohighlight">\( \sigma' \)</span>. A discrepancy-based method basically rescales the features extracted from the feature-extractor <span class="math notranslate nohighlight">\( x' \)</span> to <span class="math notranslate nohighlight">\( \frac{\sigma}{\sigma'} (x' - \mu') + \mu \)</span>. And then pass the rescaled features through the classifier.</p>
+</div>
+<div class="section" id="adversarial-based-methods">
+<h3>Adversarial-based methods.<a class="headerlink" href="#adversarial-based-methods" title="Permalink to this headline">¶</a></h3>
+<p>Adversarial-based methods utilize a <strong>feature-extractor</strong> and a <strong>discriminator</strong>. Those methods aim to train a feature-extractor that extract features that are common to different domains.</p>
+<p>For example, we have an audio feature-extractor. When training on classical music and funk, both types are encoded into a feature vector, and the discriminator’s job is to tell apart classical music and funk. And we train it like a <a class="reference internal" href="../../generative/gan/gan.html"><span class="doc std std-doc">GAN</span></a>.</p>
+</div>
+<div class="section" id="reconstruction-based-methods">
+<h3>Reconstruction-based methods.<a class="headerlink" href="#reconstruction-based-methods" title="Permalink to this headline">¶</a></h3>
+<p>Reconstruction-based methods try to utilize one <strong>encoder</strong> and multiple <strong>decoders</strong>. Those methods try to encode features that can be reconstructed by different decoders onto different domains.</p>
+<p>For example, we have an mammal image encoder, but an gorilla decoder and a monkey decoder. During training, the encoder tries to encode both images from gorilla domain, and monkey domain. The gorilla decoder would try to decode the gorilla images’ features into gorillas, and the monkey decoder would try to decode the monkey images’ features into monkeys.</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -705,8 +802,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../reuse.html" title="previous page">Reusing Existing Models</a>
-    <a class='right-next' id="next-link" href="../transfer/transfer.html" title="next page">Transfer Learning</a>
+    <a class='left-prev' id="prev-link" href="../transfer/transfer.html" title="previous page">Transfer Learning</a>
+    <a class='right-next' id="next-link" href="transfer-vs-da.html" title="next page">Transfer Learning vs Domain Adaptation</a>
 
         </div>
         
